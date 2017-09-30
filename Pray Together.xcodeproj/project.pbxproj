@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5831F7FE9370001EAE2 /* AppDelegate.swift */; };
+		F135B5861F7FE9370001EAE2 /* PrayerStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5851F7FE9370001EAE2 /* PrayerStreamViewController.swift */; };
+		F135B5881F7FE9370001EAE2 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5871F7FE9370001EAE2 /* GroupsViewController.swift */; };
+		F135B58B1F7FE9370001EAE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F135B5891F7FE9370001EAE2 /* Main.storyboard */; };
+		F135B58D1F7FE9370001EAE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F135B58C1F7FE9370001EAE2 /* Assets.xcassets */; };
+		F135B5901F7FE9370001EAE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F135B58E1F7FE9370001EAE2 /* LaunchScreen.storyboard */; };
+		F135B59B1F7FF0CD0001EAE2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B59A1F7FF0CD0001EAE2 /* WelcomeViewController.swift */; };
+		F135B59D1F7FF9EF0001EAE2 /* LoginFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B59C1F7FF9EF0001EAE2 /* LoginFirstViewController.swift */; };
+		F135B59F1F7FF9FC0001EAE2 /* LoginEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B59E1F7FF9FC0001EAE2 /* LoginEmailViewController.swift */; };
+		F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5A01F7FFA0B0001EAE2 /* RegisterFirstViewController.swift */; };
+		F135B5A31F7FFA170001EAE2 /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F135B5801F7FE9370001EAE2 /* Pray Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pray Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F135B5831F7FE9370001EAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F135B5851F7FE9370001EAE2 /* PrayerStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamViewController.swift; sourceTree = "<group>"; };
+		F135B5871F7FE9370001EAE2 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
+		F135B58A1F7FE9370001EAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F135B58C1F7FE9370001EAE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F135B58F1F7FE9370001EAE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F135B5911F7FE9370001EAE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F135B59A1F7FF0CD0001EAE2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F135B59C1F7FF9EF0001EAE2 /* LoginFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFirstViewController.swift; sourceTree = "<group>"; };
+		F135B59E1F7FF9FC0001EAE2 /* LoginEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginEmailViewController.swift; sourceTree = "<group>"; };
+		F135B5A01F7FFA0B0001EAE2 /* RegisterFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstViewController.swift; sourceTree = "<group>"; };
+		F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F135B57D1F7FE9370001EAE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F135B5771F7FE9370001EAE2 = {
+			isa = PBXGroup;
+			children = (
+				F135B5821F7FE9370001EAE2 /* Pray Together */,
+				F135B5811F7FE9370001EAE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F135B5811F7FE9370001EAE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F135B5801F7FE9370001EAE2 /* Pray Together.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F135B5821F7FE9370001EAE2 /* Pray Together */ = {
+			isa = PBXGroup;
+			children = (
+				F135B5991F7FED2A0001EAE2 /* Model */,
+				F135B5981F7FED170001EAE2 /* Views */,
+				F135B5971F7FED0A0001EAE2 /* Controllers */,
+				F135B5831F7FE9370001EAE2 /* AppDelegate.swift */,
+				F135B5891F7FE9370001EAE2 /* Main.storyboard */,
+				F135B58C1F7FE9370001EAE2 /* Assets.xcassets */,
+				F135B58E1F7FE9370001EAE2 /* LaunchScreen.storyboard */,
+				F135B5911F7FE9370001EAE2 /* Info.plist */,
+			);
+			path = "Pray Together";
+			sourceTree = "<group>";
+		};
+		F135B5971F7FED0A0001EAE2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F135B5851F7FE9370001EAE2 /* PrayerStreamViewController.swift */,
+				F135B5871F7FE9370001EAE2 /* GroupsViewController.swift */,
+				F135B59A1F7FF0CD0001EAE2 /* WelcomeViewController.swift */,
+				F135B59C1F7FF9EF0001EAE2 /* LoginFirstViewController.swift */,
+				F135B59E1F7FF9FC0001EAE2 /* LoginEmailViewController.swift */,
+				F135B5A01F7FFA0B0001EAE2 /* RegisterFirstViewController.swift */,
+				F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F135B5981F7FED170001EAE2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F135B5991F7FED2A0001EAE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F135B57F1F7FE9370001EAE2 /* Pray Together */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F135B5941F7FE9370001EAE2 /* Build configuration list for PBXNativeTarget "Pray Together" */;
+			buildPhases = (
+				F135B57C1F7FE9370001EAE2 /* Sources */,
+				F135B57D1F7FE9370001EAE2 /* Frameworks */,
+				F135B57E1F7FE9370001EAE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pray Together";
+			productName = "Pray Together";
+			productReference = F135B5801F7FE9370001EAE2 /* Pray Together.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F135B5781F7FE9370001EAE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Jason Mundie";
+				TargetAttributes = {
+					F135B57F1F7FE9370001EAE2 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F135B57B1F7FE9370001EAE2 /* Build configuration list for PBXProject "Pray Together" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F135B5771F7FE9370001EAE2;
+			productRefGroup = F135B5811F7FE9370001EAE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F135B57F1F7FE9370001EAE2 /* Pray Together */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F135B57E1F7FE9370001EAE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F135B5901F7FE9370001EAE2 /* LaunchScreen.storyboard in Resources */,
+				F135B58D1F7FE9370001EAE2 /* Assets.xcassets in Resources */,
+				F135B58B1F7FE9370001EAE2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F135B57C1F7FE9370001EAE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F135B5A31F7FFA170001EAE2 /* RegisterEmailViewController.swift in Sources */,
+				F135B5881F7FE9370001EAE2 /* GroupsViewController.swift in Sources */,
+				F135B59B1F7FF0CD0001EAE2 /* WelcomeViewController.swift in Sources */,
+				F135B59D1F7FF9EF0001EAE2 /* LoginFirstViewController.swift in Sources */,
+				F135B59F1F7FF9FC0001EAE2 /* LoginEmailViewController.swift in Sources */,
+				F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */,
+				F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */,
+				F135B5861F7FE9370001EAE2 /* PrayerStreamViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F135B5891F7FE9370001EAE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F135B58A1F7FE9370001EAE2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F135B58E1F7FE9370001EAE2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F135B58F1F7FE9370001EAE2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F135B5921F7FE9370001EAE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F135B5931F7FE9370001EAE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F135B5951F7FE9370001EAE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93X3NYEN5T;
+				INFOPLIST_FILE = "Pray Together/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonmundie.Pray-Together";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F135B5961F7FE9370001EAE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93X3NYEN5T;
+				INFOPLIST_FILE = "Pray Together/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jasonmundie.Pray-Together";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F135B57B1F7FE9370001EAE2 /* Build configuration list for PBXProject "Pray Together" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F135B5921F7FE9370001EAE2 /* Debug */,
+				F135B5931F7FE9370001EAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F135B5941F7FE9370001EAE2 /* Build configuration list for PBXNativeTarget "Pray Together" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F135B5951F7FE9370001EAE2 /* Debug */,
+				F135B5961F7FE9370001EAE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F135B5781F7FE9370001EAE2 /* Project object */;
+}
