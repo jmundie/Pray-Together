@@ -20,6 +20,9 @@
 		F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5A01F7FFA0B0001EAE2 /* RegisterFirstViewController.swift */; };
 		F135B5A31F7FFA170001EAE2 /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */; };
 		F13F006E1F80260E00429673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F135B5A41F8000060001EAE2 /* GoogleService-Info.plist */; };
+		F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */; };
+		F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */; };
+		F1E222591F8588AB004B93D9 /* PostPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		F135B5A01F7FFA0B0001EAE2 /* RegisterFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFirstViewController.swift; sourceTree = "<group>"; };
 		F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
 		F135B5A41F8000060001EAE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamTableViewCell.swift; sourceTree = "<group>"; };
+		F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerStreamTableViewCell.xib; sourceTree = "<group>"; };
+		F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPrayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,15 +98,15 @@
 		F135B5821F7FE9370001EAE2 /* Pray Together */ = {
 			isa = PBXGroup;
 			children = (
-				F135B5991F7FED2A0001EAE2 /* Model */,
-				F135B5981F7FED170001EAE2 /* Views */,
+				F1E222531F85806E004B93D9 /* Data Services */,
+				F1E222521F858060004B93D9 /* Auth Services */,
+				F1E222501F858007004B93D9 /* Models */,
+				F1E2224F1F858000004B93D9 /* Views */,
 				F135B5971F7FED0A0001EAE2 /* Controllers */,
 				F135B5831F7FE9370001EAE2 /* AppDelegate.swift */,
-				F135B5891F7FE9370001EAE2 /* Main.storyboard */,
-				F135B58C1F7FE9370001EAE2 /* Assets.xcassets */,
-				F135B58E1F7FE9370001EAE2 /* LaunchScreen.storyboard */,
 				F135B5911F7FE9370001EAE2 /* Info.plist */,
 				F135B5A41F8000060001EAE2 /* GoogleService-Info.plist */,
+				F135B58C1F7FE9370001EAE2 /* Assets.xcassets */,
 			);
 			path = "Pray Together";
 			sourceTree = "<group>";
@@ -115,22 +121,41 @@
 				F135B59E1F7FF9FC0001EAE2 /* LoginEmailViewController.swift */,
 				F135B5A01F7FFA0B0001EAE2 /* RegisterFirstViewController.swift */,
 				F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */,
+				F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		F135B5981F7FED170001EAE2 /* Views */ = {
+		F1E2224F1F858000004B93D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F135B5891F7FE9370001EAE2 /* Main.storyboard */,
+				F135B58E1F7FE9370001EAE2 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F135B5991F7FED2A0001EAE2 /* Model */ = {
+		F1E222501F858007004B93D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */,
+				F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F1E222521F858060004B93D9 /* Auth Services */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = "Auth Services";
+			sourceTree = "<group>";
+		};
+		F1E222531F85806E004B93D9 /* Data Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Services";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +222,7 @@
 			files = (
 				F13F006E1F80260E00429673 /* GoogleService-Info.plist in Resources */,
 				F135B5901F7FE9370001EAE2 /* LaunchScreen.storyboard in Resources */,
+				F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */,
 				F135B58D1F7FE9370001EAE2 /* Assets.xcassets in Resources */,
 				F135B58B1F7FE9370001EAE2 /* Main.storyboard in Resources */,
 			);
@@ -274,9 +300,11 @@
 				F135B59B1F7FF0CD0001EAE2 /* WelcomeViewController.swift in Sources */,
 				F135B59D1F7FF9EF0001EAE2 /* LoginFirstViewController.swift in Sources */,
 				F135B59F1F7FF9FC0001EAE2 /* LoginEmailViewController.swift in Sources */,
+				F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */,
 				F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */,
 				F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */,
 				F135B5861F7FE9370001EAE2 /* PrayerStreamViewController.swift in Sources */,
+				F1E222591F8588AB004B93D9 /* PostPrayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
