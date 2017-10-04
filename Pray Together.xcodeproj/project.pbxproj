@@ -23,6 +23,7 @@
 		F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */; };
 		F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */; };
 		F1E222591F8588AB004B93D9 /* PostPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */; };
+		F1E2225B1F859180004B93D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2225A1F859180004B93D9 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamTableViewCell.swift; sourceTree = "<group>"; };
 		F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerStreamTableViewCell.xib; sourceTree = "<group>"; };
 		F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPrayerViewController.swift; sourceTree = "<group>"; };
+		F1E2225A1F859180004B93D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				F135B5A01F7FFA0B0001EAE2 /* RegisterFirstViewController.swift */,
 				F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */,
 				F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */,
+				F1E2225A1F859180004B93D9 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				F135B59D1F7FF9EF0001EAE2 /* LoginFirstViewController.swift in Sources */,
 				F135B59F1F7FF9FC0001EAE2 /* LoginEmailViewController.swift in Sources */,
 				F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */,
+				F1E2225B1F859180004B93D9 /* ProfileViewController.swift in Sources */,
 				F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */,
 				F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */,
 				F135B5861F7FE9370001EAE2 /* PrayerStreamViewController.swift in Sources */,
