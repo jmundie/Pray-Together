@@ -188,9 +188,12 @@
                                     <constraint firstAttribute="height" constant="40" id="oQo-e0-Y5b"/>
                                 </constraints>
                                 <state key="normal" image="Register Button"/>
+                                <connections>
+                                    <action selector="postPrayerButtonPressed:" destination="w0U-Hn-yV2" eventType="touchUpInside" id="42F-Wc-b98"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-tJ-jp9">
-                                <rect key="frame" x="165" y="565" width="45.5" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-tJ-jp9">
+                                <rect key="frame" x="125.5" y="565" width="125" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -200,6 +203,7 @@
                         <constraints>
                             <constraint firstItem="qsj-6m-2fU" firstAttribute="centerY" secondItem="wmt-sF-dWz" secondAttribute="centerY" id="0ia-BI-Imv"/>
                             <constraint firstItem="OaS-op-jIt" firstAttribute="top" secondItem="CM3-pe-9p2" secondAttribute="bottom" constant="10" id="3FH-fK-fgb"/>
+                            <constraint firstItem="fgJ-tJ-jp9" firstAttribute="centerX" secondItem="HFr-84-MCM" secondAttribute="centerX" id="5Bs-Vj-aTT"/>
                             <constraint firstItem="wmt-sF-dWz" firstAttribute="leading" secondItem="ckv-2i-MaX" secondAttribute="leading" id="I3b-1R-0rh"/>
                             <constraint firstItem="u49-43-EJ6" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" id="JHM-Da-qhP"/>
                             <constraint firstItem="4UH-9C-Rtl" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" id="KWa-dN-wyY"/>
@@ -215,15 +219,24 @@
                             <constraint firstItem="u49-43-EJ6" firstAttribute="trailing" secondItem="49g-0a-L9l" secondAttribute="trailing" id="evi-DL-UMY"/>
                             <constraint firstItem="qsj-6m-2fU" firstAttribute="trailing" secondItem="ckv-2i-MaX" secondAttribute="trailing" id="iZK-U5-YsH"/>
                             <constraint firstItem="CM3-pe-9p2" firstAttribute="top" secondItem="u49-43-EJ6" secondAttribute="bottom" id="kg7-11-z7F"/>
+                            <constraint firstItem="fgJ-tJ-jp9" firstAttribute="centerY" secondItem="ReG-HP-JfF" secondAttribute="centerY" id="mN1-JO-0hl"/>
                             <constraint firstItem="OaS-op-jIt" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" constant="25" id="qAr-8l-ncC"/>
-                            <constraint firstItem="fgJ-tJ-jp9" firstAttribute="centerY" secondItem="ReG-HP-JfF" secondAttribute="centerY" id="qGk-5z-I6U"/>
-                            <constraint firstItem="fgJ-tJ-jp9" firstAttribute="centerX" secondItem="HFr-84-MCM" secondAttribute="centerX" id="rI2-jK-8qB"/>
                             <constraint firstItem="CM3-pe-9p2" firstAttribute="trailing" secondItem="49g-0a-L9l" secondAttribute="trailing" id="v0i-4J-Zpl"/>
                             <constraint firstItem="4UH-9C-Rtl" firstAttribute="top" secondItem="u49-43-EJ6" secondAttribute="bottom" id="zVY-iW-BP6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="49g-0a-L9l"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Prayer" image="compose" id="gQT-Yr-fan"/>
+                    <connections>
+                        <outlet property="facebookLabel" destination="wmt-sF-dWz" id="RGo-gZ-owt"/>
+                        <outlet property="facebookSwitch" destination="qsj-6m-2fU" id="xtz-jw-x8e"/>
+                        <outlet property="postButton" destination="ReG-HP-JfF" id="mYJ-Kr-e2d"/>
+                        <outlet property="postPrayerLabel" destination="fgJ-tJ-jp9" id="JKg-gP-frH"/>
+                        <outlet property="postToGroups" destination="4HV-xn-eay" id="1ox-jB-qwR"/>
+                        <outlet property="postToOrganizations" destination="ckv-2i-MaX" id="T4q-06-nGH"/>
+                        <outlet property="prayerTextField" destination="qJz-3p-Zef" id="VRz-mJ-WK5"/>
+                        <outlet property="profileImage" destination="dga-4J-Xvr" id="Yag-IY-yWi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57D-iP-ruV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -24,6 +24,7 @@
 		F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */; };
 		F1E222591F8588AB004B93D9 /* PostPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */; };
 		F1E2225B1F859180004B93D9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2225A1F859180004B93D9 /* ProfileViewController.swift */; };
+		F1E2225E1F85955B004B93D9 /* bindtoKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E2225D1F85955B004B93D9 /* bindtoKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerStreamTableViewCell.xib; sourceTree = "<group>"; };
 		F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPrayerViewController.swift; sourceTree = "<group>"; };
 		F1E2225A1F859180004B93D9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F1E2225D1F85955B004B93D9 /* bindtoKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bindtoKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 		F135B5821F7FE9370001EAE2 /* Pray Together */ = {
 			isa = PBXGroup;
 			children = (
-				F1E222531F85806E004B93D9 /* Data Services */,
+				F1E2225C1F8592CA004B93D9 /* Extension */,
 				F1E222521F858060004B93D9 /* Auth Services */,
+				F1E222531F85806E004B93D9 /* Data Services */,
 				F1E222501F858007004B93D9 /* Models */,
 				F1E2224F1F858000004B93D9 /* Views */,
 				F135B5971F7FED0A0001EAE2 /* Controllers */,
@@ -159,6 +162,15 @@
 			children = (
 			);
 			path = "Data Services";
+			sourceTree = "<group>";
+		};
+		F1E2225C1F8592CA004B93D9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F1E2225D1F85955B004B93D9 /* bindtoKeyboard.swift */,
+			);
+			name = Extension;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1E2225E1F85955B004B93D9 /* bindtoKeyboard.swift in Sources */,
 				F135B5A31F7FFA170001EAE2 /* RegisterEmailViewController.swift in Sources */,
 				F135B5881F7FE9370001EAE2 /* GroupsViewController.swift in Sources */,
 				F135B59B1F7FF0CD0001EAE2 /* WelcomeViewController.swift in Sources */,
