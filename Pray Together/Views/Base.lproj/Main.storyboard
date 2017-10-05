@@ -430,7 +430,7 @@
         <!--Profile-->
         <scene sceneID="c0b-fE-Erw">
             <objects>
-                <viewController id="ZVm-gy-xUa" customClass="ProfileViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="ZVm-gy-xUa" customClass="ProfileViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V5D-aD-mXl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -455,9 +455,17 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poB-Xd-JSI">
+                                        <rect key="frame" x="324" y="25" width="31" height="26"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="Logout"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="poB-Xd-JSI" secondAttribute="trailing" constant="20" id="Fvb-qn-els"/>
+                                    <constraint firstItem="poB-Xd-JSI" firstAttribute="centerY" secondItem="H4o-Tz-Ziv" secondAttribute="centerY" id="SbW-49-sWz"/>
+                                    <constraint firstItem="poB-Xd-JSI" firstAttribute="top" secondItem="s0N-rP-guE" secondAttribute="top" constant="25" id="V1U-tH-Rtp"/>
                                     <constraint firstItem="5no-34-Wrx" firstAttribute="centerX" secondItem="s0N-rP-guE" secondAttribute="centerX" id="Vse-gR-tdm"/>
                                     <constraint firstAttribute="height" constant="70" id="la5-jf-9Gz"/>
                                     <constraint firstItem="5no-34-Wrx" firstAttribute="top" secondItem="s0N-rP-guE" secondAttribute="top" constant="25" id="yy0-rL-VFz"/>
@@ -615,12 +623,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ra-cu-PwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736.79999999999995" y="1041.2293853073463"/>
+            <point key="canvasLocation" x="-178" y="739"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="Krv-D7-2u9">
             <objects>
-                <viewController id="Gjd-F3-bye" customClass="WelcomeViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeVC" id="Gjd-F3-bye" customClass="WelcomeViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6c0-g4-Bp5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -889,6 +897,9 @@
                                             <constraint firstAttribute="width" constant="250" id="OL7-uX-kNR"/>
                                         </constraints>
                                         <state key="normal" image="Register Button"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="vkE-tc-cLU" eventType="touchUpInside" id="Eru-TG-1cK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -916,6 +927,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WjE-44-fIP"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="qHy-r5-Si8" id="UjS-aA-evA"/>
+                        <outlet property="loginButton" destination="tDV-gO-Ru2" id="fn4-mo-ClS"/>
+                        <outlet property="loginButtonLabel" destination="6st-Zx-X0i" id="UQg-bp-1pC"/>
+                        <outlet property="loginEmailTextField" destination="dPT-P6-k73" id="uK0-uU-EWl"/>
+                        <outlet property="loginPasswordTextField" destination="pNq-kW-C6m" id="IrV-Cz-5oc"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="gotoHomeLogin" id="6wg-wG-R69"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcz-Hd-y9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -924,7 +943,7 @@
         <!--Register Email View Controller-->
         <scene sceneID="8D8-ox-oeI">
             <objects>
-                <viewController id="3QY-f8-nz7" customClass="RegisterEmailViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="goToProfile" id="3QY-f8-nz7" customClass="RegisterEmailViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nhe-I4-gj0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -982,6 +1001,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAn-f0-F8q">
                                         <rect key="frame" x="0.0" y="80" width="250" height="38"/>
                                         <state key="normal" image="Register Button"/>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="3QY-f8-nz7" eventType="touchUpInside" id="Fpy-69-Wdh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1012,6 +1034,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g9G-WT-c2I"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="PfS-Ko-LiT" id="fAD-33-5hB"/>
+                        <outlet property="registerButtonLabel" destination="c5C-te-9J2" id="LUJ-tj-iLO"/>
+                        <outlet property="registrationEmailTextField" destination="29i-IY-6Dw" id="FKF-B8-a2l"/>
+                        <outlet property="registrationPasswordTextField" destination="hdV-kD-TcU" id="whR-na-Pz6"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="gotoHome" id="f3e-Yz-eqp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfb-QH-6oH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1145,7 +1174,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-911" y="102"/>
         </scene>
     </scenes>
     <resources>
@@ -1161,5 +1190,8 @@
         <image name="groups-tabIcon" width="25" height="23"/>
         <image name="me-tabIcon" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6wg-wG-R69"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
