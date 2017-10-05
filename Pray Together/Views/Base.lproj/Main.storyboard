@@ -156,8 +156,8 @@
                                     <constraint firstAttribute="height" constant="2" id="uvX-yN-qJm"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OaS-op-jIt">
-                                <rect key="frame" x="25" y="255" width="325" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OaS-op-jIt">
+                                <rect key="frame" x="25" y="255" width="325" height="65"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post to groups" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-xn-eay">
                                         <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
@@ -166,7 +166,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post to organizations" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ckv-2i-MaX">
-                                        <rect key="frame" x="0.0" y="40" width="325" height="30"/>
+                                        <rect key="frame" x="0.0" y="35" width="325" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -174,26 +174,26 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-sF-dWz">
-                                <rect key="frame" x="25" y="350" width="75.5" height="22.5"/>
+                                <rect key="frame" x="25" y="335" width="75.5" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsj-6m-2fU">
-                                <rect key="frame" x="301" y="346" width="51" height="31"/>
+                                <rect key="frame" x="301" y="331" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReG-HP-JfF">
-                                <rect key="frame" x="25" y="558" width="325" height="40"/>
+                                <rect key="frame" x="0.0" y="578" width="375" height="40"/>
+                                <color key="backgroundColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="oQo-e0-Y5b"/>
                                 </constraints>
-                                <state key="normal" image="Register Button"/>
                                 <connections>
                                     <action selector="postPrayerButtonPressed:" destination="w0U-Hn-yV2" eventType="touchUpInside" id="42F-Wc-b98"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Prayer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgJ-tJ-jp9">
-                                <rect key="frame" x="125.5" y="565" width="125" height="26"/>
+                                <rect key="frame" x="125.5" y="585" width="125" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -207,11 +207,11 @@
                             <constraint firstItem="wmt-sF-dWz" firstAttribute="leading" secondItem="ckv-2i-MaX" secondAttribute="leading" id="I3b-1R-0rh"/>
                             <constraint firstItem="u49-43-EJ6" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" id="JHM-Da-qhP"/>
                             <constraint firstItem="4UH-9C-Rtl" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" id="KWa-dN-wyY"/>
-                            <constraint firstItem="49g-0a-L9l" firstAttribute="trailing" secondItem="ReG-HP-JfF" secondAttribute="trailing" constant="25" id="P4e-dr-KaW"/>
-                            <constraint firstItem="ReG-HP-JfF" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" constant="25" id="SyO-48-Tqi"/>
-                            <constraint firstItem="49g-0a-L9l" firstAttribute="bottom" secondItem="ReG-HP-JfF" secondAttribute="bottom" constant="20" id="T8N-rA-sZR"/>
+                            <constraint firstItem="49g-0a-L9l" firstAttribute="trailing" secondItem="ReG-HP-JfF" secondAttribute="trailing" id="P4e-dr-KaW"/>
+                            <constraint firstItem="ReG-HP-JfF" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" id="SyO-48-Tqi"/>
+                            <constraint firstItem="49g-0a-L9l" firstAttribute="bottom" secondItem="ReG-HP-JfF" secondAttribute="bottom" id="T8N-rA-sZR"/>
                             <constraint firstItem="OaS-op-jIt" firstAttribute="centerX" secondItem="HFr-84-MCM" secondAttribute="centerX" id="Twu-hk-aY3"/>
-                            <constraint firstItem="wmt-sF-dWz" firstAttribute="top" secondItem="OaS-op-jIt" secondAttribute="bottom" constant="25" id="U4i-Yx-iAN"/>
+                            <constraint firstItem="wmt-sF-dWz" firstAttribute="top" secondItem="OaS-op-jIt" secondAttribute="bottom" constant="15" id="U4i-Yx-iAN"/>
                             <constraint firstItem="49g-0a-L9l" firstAttribute="trailing" secondItem="OaS-op-jIt" secondAttribute="trailing" constant="25" id="X8Z-Fa-MT6"/>
                             <constraint firstItem="CM3-pe-9p2" firstAttribute="leading" secondItem="49g-0a-L9l" secondAttribute="leading" id="XJH-fk-1Jw"/>
                             <constraint firstItem="u49-43-EJ6" firstAttribute="top" secondItem="HFr-84-MCM" secondAttribute="top" id="XaT-Is-zBM"/>
@@ -623,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ra-cu-PwR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-178" y="739"/>
+            <point key="canvasLocation" x="750" y="1113"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="Krv-D7-2u9">
@@ -1166,10 +1166,10 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="Lv8-4z-gVj" kind="relationship" relationship="viewControllers" id="GhW-Ai-H0h"/>
                         <segue destination="w0U-Hn-yV2" kind="relationship" relationship="viewControllers" id="cYQ-m5-6jv"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="ZVm-gy-xUa" kind="relationship" relationship="viewControllers" id="C1j-Vk-ifO"/>
-                        <segue destination="Lv8-4z-gVj" kind="relationship" relationship="viewControllers" id="GhW-Ai-H0h"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
