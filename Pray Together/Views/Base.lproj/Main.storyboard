@@ -55,11 +55,11 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mtJ-47-NYC" customClass="PrayerStreamTableViewCell" customModule="Pray_Together" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="mtJ-47-NYC" customClass="PrayerStreamTableViewCell" customModule="Pray_Together" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mtJ-47-NYC" id="FeC-IL-0HC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -124,7 +124,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CM3-pe-9p2">
-                                <rect key="frame" x="0.0" y="70" width="375" height="175"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="120"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="dga-4J-Xvr">
                                         <rect key="frame" x="10" y="25" width="75" height="75"/>
@@ -134,7 +134,7 @@
                                         </constraints>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post prayer here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qJz-3p-Zef">
-                                        <rect key="frame" x="95" y="25" width="265" height="124"/>
+                                        <rect key="frame" x="95" y="25" width="265" height="75"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -144,11 +144,11 @@
                                 <constraints>
                                     <constraint firstItem="dga-4J-Xvr" firstAttribute="top" secondItem="CM3-pe-9p2" secondAttribute="top" constant="25" id="9gb-ej-SwS"/>
                                     <constraint firstItem="qJz-3p-Zef" firstAttribute="top" secondItem="CM3-pe-9p2" secondAttribute="top" constant="25" id="Jil-gw-r71"/>
-                                    <constraint firstItem="qJz-3p-Zef" firstAttribute="centerY" secondItem="CM3-pe-9p2" secondAttribute="centerY" id="Me8-Iu-JBc"/>
                                     <constraint firstItem="qJz-3p-Zef" firstAttribute="top" secondItem="dga-4J-Xvr" secondAttribute="top" id="Mpq-b0-sTx"/>
                                     <constraint firstAttribute="trailing" secondItem="qJz-3p-Zef" secondAttribute="trailing" constant="15" id="cVj-lF-Pjz"/>
+                                    <constraint firstItem="qJz-3p-Zef" firstAttribute="centerY" secondItem="dga-4J-Xvr" secondAttribute="centerY" id="dC0-Xd-gRf"/>
                                     <constraint firstItem="dga-4J-Xvr" firstAttribute="leading" secondItem="CM3-pe-9p2" secondAttribute="leading" constant="10" id="j1m-nS-h5L"/>
-                                    <constraint firstAttribute="height" constant="175" id="lpu-Jt-tqX"/>
+                                    <constraint firstAttribute="height" constant="120" id="lpu-Jt-tqX"/>
                                     <constraint firstItem="qJz-3p-Zef" firstAttribute="leading" secondItem="dga-4J-Xvr" secondAttribute="trailing" constant="10" id="y77-lb-otj"/>
                                 </constraints>
                             </view>
@@ -160,7 +160,7 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OaS-op-jIt">
-                                <rect key="frame" x="25" y="255" width="325" height="65"/>
+                                <rect key="frame" x="25" y="200" width="325" height="65"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post to groups" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4HV-xn-eay">
                                         <rect key="frame" x="0.0" y="0.0" width="325" height="30"/>
@@ -177,13 +177,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmt-sF-dWz">
-                                <rect key="frame" x="25" y="335" width="75.5" height="22.5"/>
+                                <rect key="frame" x="25" y="280" width="75.5" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsj-6m-2fU">
-                                <rect key="frame" x="301" y="331" width="51" height="31"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qsj-6m-2fU">
+                                <rect key="frame" x="301" y="276" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReG-HP-JfF">
                                 <rect key="frame" x="0.0" y="578" width="375" height="40"/>
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57D-iP-ruV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-979"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-979.16041979010504"/>
         </scene>
         <!--Groups-->
         <scene sceneID="wg7-f3-ORb">

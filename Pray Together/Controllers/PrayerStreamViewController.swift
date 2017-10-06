@@ -29,12 +29,14 @@ class PrayerStreamViewController: UIViewController, UITableViewDelegate, UITable
         configureTableView ()
         retrievePrayers ()
         
+        prayerStreamTableView.separatorStyle = .none
+        
         
     }
     
     func configureTableView () {
         prayerStreamTableView.rowHeight = UITableViewAutomaticDimension
-        prayerStreamTableView.estimatedRowHeight = 320.0
+        prayerStreamTableView.estimatedRowHeight = 300.0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,8 +49,8 @@ class PrayerStreamViewController: UIViewController, UITableViewDelegate, UITable
         cell.content.text = prayerArray[indexPath.row].prayerContent
         cell.username.text = prayerArray[indexPath.row].senderId
         cell.profileImage.image = UIImage(named: "defaultProfileImage")
-        cell.numberOfTimesPrayedFor.text = "123"
-        cell.prayedForIcon.image = UIImage(named: "person-with-folded-hands_1f64f")
+        
+        
         
         return cell
     }

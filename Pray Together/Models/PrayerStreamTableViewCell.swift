@@ -14,14 +14,19 @@ class PrayerStreamTableViewCell: UITableViewCell {
     
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var content: UILabel!
-    @IBOutlet weak var prayedForIcon: UIImageView!
+    @IBOutlet weak var prayedForButton: UIButton!
     @IBOutlet weak var numberOfTimesPrayedFor: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+     
+        
     }
 
+    @IBAction func prayedForButtonPressed(_ sender: Any) {
+        
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
