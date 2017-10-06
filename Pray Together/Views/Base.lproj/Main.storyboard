@@ -18,7 +18,7 @@
         <!--Stream-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="PrayerStreamViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrayerStreamVC" id="9pv-A4-QxB" customClass="PrayerStreamViewController" customModule="Pray_Together" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oYe-Kt-foo">
-                                <rect key="frame" x="0.0" y="70" width="375" height="548"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mtJ-47-NYC">
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="750" y="-290"/>
         </scene>
         <!--New Prayer-->
         <scene sceneID="QWw-UA-XU9">
@@ -236,6 +236,7 @@
                         <outlet property="postToOrganizations" destination="ckv-2i-MaX" id="T4q-06-nGH"/>
                         <outlet property="prayerTextField" destination="qJz-3p-Zef" id="VRz-mJ-WK5"/>
                         <outlet property="profileImage" destination="dga-4J-Xvr" id="Yag-IY-yWi"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="goToPrayerStreamVC" id="5HI-u6-Ugj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57D-iP-ruV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1192,6 +1193,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6wg-wG-R69"/>
+        <segue reference="5HI-u6-Ugj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

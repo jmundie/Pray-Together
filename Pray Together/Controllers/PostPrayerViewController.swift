@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PostPrayerViewController: UIViewController {
 //OUTLETS
@@ -29,6 +30,26 @@ class PostPrayerViewController: UIViewController {
     }
 
     @IBAction func postPrayerButtonPressed(_ sender: Any) {
+        prayerTextField.endEditing(true)
+        postButton.isEnabled = false
+        
+        let prayersDB = Database.database().reference().child("Prayers")
+        
+        let messageDictionary = ["sender": Auth.auth().currentUser?.email, "PrayerBody": prayerTextField.text!]
+        
+        prayersDB.childByAutoId().setValue(messageDictionary) {
+            (error, ref) in
+            
+            if error != nil {
+                print(error as Any)
+            } else {
+                print("prayer saved successfully")
+                
+                self.performSegue(withIdentifier: "goToPrayerStreamVC", sender: self)
+                
+            }
+            
+        }
     }
     
     

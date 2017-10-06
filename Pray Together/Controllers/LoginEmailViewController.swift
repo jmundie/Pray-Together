@@ -37,11 +37,14 @@ class LoginEmailViewController: UIViewController {
         Firebase.Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
             if error != nil {
                 print(error!)
+                self.backButton.isEnabled = false
                 self.loginButtonLabel.text = "Error"
+                
             } else {
                 print("login successful")
-                self.loginButtonLabel.text = "SUCCESS"
                 self.backButton.isEnabled = false
+                self.loginButtonLabel.text = "SUCCESS"
+                
                 
                 self.performSegue(withIdentifier: "gotoHomeLogin", sender: self)
             }
