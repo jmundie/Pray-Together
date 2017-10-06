@@ -38,7 +38,20 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.usernameLabel.text = Auth.auth().currentUser?.email
+    }
+    
     @IBAction func logoutButtonPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeViewController
+            self.present(welcomeVC, animated: true, completion: nil)
+        } catch {
+            print("error signing out")
+        }
     }
     
     @IBAction func editProfileButtonPressed(_ sender: Any) {
