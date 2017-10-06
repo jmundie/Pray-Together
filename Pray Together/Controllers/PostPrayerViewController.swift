@@ -45,7 +45,7 @@ class PostPrayerViewController: UIViewController {
             } else {
                 print("prayer saved successfully")
                 
-                self.performSegue(withIdentifier: "goToPrayerStreamVC", sender: self)
+                self.performSegue(withIdentifier: "goHome", sender: self)
                 
             }
             
