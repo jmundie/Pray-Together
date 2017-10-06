@@ -14,6 +14,8 @@ class RegisterEmailViewController: UIViewController {
 //    OUTLETS
     @IBOutlet weak var registrationEmailTextField: UITextField!
     
+    @IBOutlet weak var usernameTextField: UITextField!
+    
     @IBOutlet weak var registrationPasswordTextField: UITextField!
     
     @IBOutlet weak var registerButtonLabel: UILabel!

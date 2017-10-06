@@ -654,6 +654,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="94R-co-4fS">
                                 <rect key="frame" x="0.0" y="272" width="375" height="346"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FOl-or-hMw">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FOl-or-hMw" id="uFz-kl-4mG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1059,7 +1069,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VGq-sH-0Eh">
-                                <rect key="frame" x="62" y="178.5" width="250" height="118"/>
+                                <rect key="frame" x="62" y="178.5" width="250" height="158"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29i-IY-6Dw">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -1067,14 +1077,20 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-kD-TcU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWL-AR-ZlM">
                                         <rect key="frame" x="0.0" y="40" width="250" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-kD-TcU">
+                                        <rect key="frame" x="0.0" y="80" width="250" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAn-f0-F8q">
-                                        <rect key="frame" x="0.0" y="80" width="250" height="38"/>
+                                        <rect key="frame" x="0.0" y="120" width="250" height="38"/>
                                         <state key="normal" image="Register Button"/>
                                         <connections>
                                             <action selector="registerButtonPressed:" destination="3QY-f8-nz7" eventType="touchUpInside" id="Fpy-69-Wdh"/>
@@ -1086,7 +1102,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5C-te-9J2">
-                                <rect key="frame" x="144" y="264.5" width="87.5" height="26"/>
+                                <rect key="frame" x="144" y="304.5" width="87.5" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1114,6 +1130,7 @@
                         <outlet property="registerButtonLabel" destination="c5C-te-9J2" id="LUJ-tj-iLO"/>
                         <outlet property="registrationEmailTextField" destination="29i-IY-6Dw" id="FKF-B8-a2l"/>
                         <outlet property="registrationPasswordTextField" destination="hdV-kD-TcU" id="whR-na-Pz6"/>
+                        <outlet property="usernameTextField" destination="xWL-AR-ZlM" id="4X2-yb-lQG"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="gotoHome" id="f3e-Yz-eqp"/>
                     </connections>
                 </viewController>
@@ -1267,7 +1284,7 @@
         <image name="me-tabIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uSO-Pz-YlB"/>
+        <segue reference="f3e-Yz-eqp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

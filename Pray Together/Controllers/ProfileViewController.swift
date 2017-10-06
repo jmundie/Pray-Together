@@ -9,7 +9,9 @@
 import UIKit
 import Firebase
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
     
 //    OUTLETS
     @IBOutlet weak var logoutButton: UIButton!
@@ -32,11 +34,50 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileTableView: UITableView!
     
+    var prayerArray : [Prayers] = [Prayers]()
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        profileTableView.delegate = self
+        profileTableView.dataSource = self
+        profileTableView.register(UINib(nibName: "ProfileStreamTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileStreamCell")
+        
+        retrievePrayers()
+        
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return prayerArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileStreamCell", for: indexPath) as! ProfileStreamTableViewCell
+        
+        cell.prayerContentLabel.text = prayerArray[indexPath.row].prayerContent
+        
+        return cell        
+    }
+    
+    func retrievePrayers () {
+        let prayersDB = Database.database().reference().child("Prayers")
+        prayersDB.observe(.childAdded) { (snapshot) in
+            
+            let snapshotValue = snapshot.value as! Dictionary<String, String>
+            let text = snapshotValue["PrayerBody"]!
+            let sender = snapshotValue["sender"]
+            
+            let prayer = Prayers(prayerContent: text, senderId: sender!)
+            
+            self.prayerArray.append(prayer)
+            self.profileTableView.reloadData()
+            
+            self.profileTableView.reloadData()
+        }
+    
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -68,3 +109,4 @@ class ProfileViewController: UIViewController {
     }
     
 }
+

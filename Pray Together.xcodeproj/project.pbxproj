@@ -21,6 +21,8 @@
 		F135B5A31F7FFA170001EAE2 /* RegisterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */; };
 		F13F006E1F80260E00429673 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F135B5A41F8000060001EAE2 /* GoogleService-Info.plist */; };
 		F1BEFB8F1F86FBDD008ABF04 /* Prayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BEFB8E1F86FBDD008ABF04 /* Prayers.swift */; };
+		F1BEFB941F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BEFB921F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift */; };
+		F1BEFB951F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1BEFB931F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib */; };
 		F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */; };
 		F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */; };
 		F1E222591F8588AB004B93D9 /* PostPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */; };
@@ -47,6 +49,8 @@
 		F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEmailViewController.swift; sourceTree = "<group>"; };
 		F135B5A41F8000060001EAE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F1BEFB8E1F86FBDD008ABF04 /* Prayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayers.swift; sourceTree = "<group>"; };
+		F1BEFB921F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStreamTableViewCell.swift; sourceTree = "<group>"; };
+		F1BEFB931F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileStreamTableViewCell.xib; sourceTree = "<group>"; };
 		F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamTableViewCell.swift; sourceTree = "<group>"; };
 		F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerStreamTableViewCell.xib; sourceTree = "<group>"; };
 		F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPrayerViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */,
 				F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */,
 				F1BEFB8E1F86FBDD008ABF04 /* Prayers.swift */,
+				F1BEFB921F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift */,
+				F1BEFB931F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +249,7 @@
 				F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */,
 				F135B58D1F7FE9370001EAE2 /* Assets.xcassets in Resources */,
 				F135B58B1F7FE9370001EAE2 /* Main.storyboard in Resources */,
+				F1BEFB951F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +330,7 @@
 				F1E2225B1F859180004B93D9 /* ProfileViewController.swift in Sources */,
 				F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */,
 				F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */,
+				F1BEFB941F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift in Sources */,
 				F135B5861F7FE9370001EAE2 /* PrayerStreamViewController.swift in Sources */,
 				F1BEFB8F1F86FBDD008ABF04 /* Prayers.swift in Sources */,
 				F1E222591F8588AB004B93D9 /* PostPrayerViewController.swift in Sources */,
