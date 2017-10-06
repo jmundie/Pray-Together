@@ -24,12 +24,12 @@ class PrayerStreamViewController: UIViewController, UITableViewDelegate, UITable
         prayerStreamTableView.delegate = self
         prayerStreamTableView.dataSource = self
         
-        prayerStreamTableView.register(UINib(nibName: "PrayerStreamTableViewCell", bundle: nil), forCellReuseIdentifier: "Prayer Stream Table View Cell")
+        prayerStreamTableView.register(UINib(nibName: "PrayerStreamTableViewCell", bundle: nil), forCellReuseIdentifier: "PrayerStreamCell")
         
         configureTableView ()
         retrievePrayers ()
         
-        prayerStreamTableView.separatorStyle = .none
+        prayerStreamTableView.separatorStyle = .singleLine
         
         
     }
@@ -44,7 +44,7 @@ class PrayerStreamViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Prayer Stream Table View Cell", for: indexPath) as! PrayerStreamTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PrayerStreamCell", for: indexPath) as! PrayerStreamTableViewCell
         
         cell.content.text = prayerArray[indexPath.row].prayerContent
         cell.username.text = prayerArray[indexPath.row].senderId
