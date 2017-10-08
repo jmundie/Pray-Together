@@ -126,7 +126,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CM3-pe-9p2">
                                 <rect key="frame" x="0.0" y="70" width="375" height="120"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="dga-4J-Xvr">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="dga-4J-Xvr">
                                         <rect key="frame" x="10" y="25" width="75" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="1fd-OK-4We"/>
@@ -492,7 +492,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QaW-sr-CDt">
                                 <rect key="frame" x="0.0" y="72" width="375" height="200"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Sji-S6-gu0">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="Sji-S6-gu0">
                                         <rect key="frame" x="25" y="25" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="OCz-pP-vAx"/>
@@ -706,32 +706,33 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJv-v4-C3n">
                                 <rect key="frame" x="0.0" y="72" width="375" height="200"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-zS-6W6">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-zS-6W6">
                                         <rect key="frame" x="112.5" y="10" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="1Sp-YR-7xa"/>
                                             <constraint firstAttribute="height" constant="150" id="atE-KB-KqV"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOK-Dp-uvo">
-                                        <rect key="frame" x="172" y="165" width="30" height="30"/>
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojl-25-HhY">
+                                        <rect key="frame" x="157" y="165" width="60" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="d4e-Yh-jjI"/>
-                                            <constraint firstAttribute="width" constant="30" id="fNl-g0-95d"/>
+                                            <constraint firstAttribute="width" constant="60" id="d5Y-ty-wAV"/>
+                                            <constraint firstAttribute="height" constant="30" id="hhS-LD-zFt"/>
                                         </constraints>
-                                        <state key="normal" image="icon-camera-128"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <state key="normal" image="cameraIcon"/>
                                         <connections>
-                                            <action selector="cameraButtonPressed:" destination="ZVm-gy-xUa" eventType="touchUpInside" id="UaN-md-Ctd"/>
+                                            <action selector="cameraButtonPressed:" destination="qLr-Ot-Uiu" eventType="touchUpInside" id="inX-w5-MVS"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="pcb-zS-6W6" firstAttribute="centerX" secondItem="yJv-v4-C3n" secondAttribute="centerX" id="2eh-gu-Xdy"/>
-                                    <constraint firstItem="aOK-Dp-uvo" firstAttribute="top" secondItem="pcb-zS-6W6" secondAttribute="bottom" constant="5" id="6gC-uD-rQT"/>
-                                    <constraint firstItem="aOK-Dp-uvo" firstAttribute="centerX" secondItem="yJv-v4-C3n" secondAttribute="centerX" id="B29-xW-3b4"/>
                                     <constraint firstItem="pcb-zS-6W6" firstAttribute="top" secondItem="yJv-v4-C3n" secondAttribute="top" constant="10" id="EfO-yd-MNv"/>
+                                    <constraint firstItem="ojl-25-HhY" firstAttribute="top" secondItem="pcb-zS-6W6" secondAttribute="bottom" constant="5" id="opc-ew-gyK"/>
                                     <constraint firstAttribute="height" constant="200" id="s2z-LT-xJC"/>
+                                    <constraint firstItem="ojl-25-HhY" firstAttribute="centerX" secondItem="yJv-v4-C3n" secondAttribute="centerX" id="zCm-ul-NrD"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7kI-E9-rqI">
@@ -822,7 +823,6 @@
                     <connections>
                         <outlet property="backButton" destination="rYW-Uj-Lda" id="LIF-zC-GrU"/>
                         <outlet property="bioTextField" destination="Ovb-XS-iGH" id="KyK-f2-NTn"/>
-                        <outlet property="cameraButton" destination="aOK-Dp-uvo" id="eel-JP-vah"/>
                         <outlet property="emailTextField" destination="YAl-6Y-hgm" id="fWw-cs-8yC"/>
                         <outlet property="nameTextField" destination="dwT-Ox-WZB" id="eyZ-Hk-TaP"/>
                         <outlet property="passwordTextField" destination="C6i-uc-S8r" id="tCY-Hd-Irq"/>
@@ -834,7 +834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGs-QN-V2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="1112"/>
+            <point key="canvasLocation" x="1420" y="1111.3943028485758"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="Krv-D7-2u9">
@@ -1401,12 +1401,12 @@
         <image name="Register Button" width="336" height="38"/>
         <image name="RegisterBG" width="375" height="667"/>
         <image name="TreeColor" width="2427" height="3831"/>
+        <image name="cameraIcon" width="750" height="400"/>
         <image name="compose" width="21" height="24"/>
         <image name="defaultProfileImage" width="102" height="102"/>
         <image name="emailIcon" width="25" height="16"/>
         <image name="feed-tabIcon" width="25" height="21"/>
         <image name="groups-tabIcon" width="25" height="23"/>
-        <image name="icon-camera-128" width="128" height="128"/>
         <image name="me-tabIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
