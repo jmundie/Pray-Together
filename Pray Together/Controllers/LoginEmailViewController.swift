@@ -34,23 +34,41 @@ class LoginEmailViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed(_ sender: Any) {
-        Firebase.Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
-            if error != nil {
-                print(error!)
-                self.backButton.isEnabled = false
-                self.loginButtonLabel.text = "Error"
-                
-            } else {
-                print("login successful")
-                self.backButton.isEnabled = false
-                self.loginButtonLabel.text = "SUCCESS"
-                
-                
-                self.performSegue(withIdentifier: "gotoHomeLogin", sender: self)
+        if loginEmailTextField.text != nil && loginPasswordTextField.text != nil {
+            AuthService.instance.loginUser(withEmail: loginEmailTextField.text!, andPassword: loginPasswordTextField.text!, loginComplete: { (success, loginError) in
+                if success {
+                    self.backButton.isEnabled = false
+                    self.loginButtonLabel.text = "SUCCESS"
+                    self.performSegue(withIdentifier: "gotoHomeLogin", sender: self)
+                } else {
+                    
+                    self.loginButtonLabel.text = "ERROR, TRY AGAIN"
+                    print(String(describing: loginError?.localizedDescription))
+                  
+                }
+        
+        
+        
+        
+        
+        //        Firebase.Auth.auth().signIn(withEmail: loginEmailTextField.text!, password: loginPasswordTextField.text!) { (user, error) in
+//            if error != nil {
+//                print(error!)
+//                self.backButton.isEnabled = false
+//                self.loginButtonLabel.text = "Error"
+//
+//            } else {
+//                print("login successful")
+//                self.backButton.isEnabled = false
+//                self.loginButtonLabel.text = "SUCCESS"
+//
+//
+//                self.performSegue(withIdentifier: "gotoHomeLogin", sender: self)
+//            }
+//
+//        }
             }
-            
-        }
+        )}
     }
 }
-    
 
