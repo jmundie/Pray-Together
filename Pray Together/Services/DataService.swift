@@ -17,6 +17,7 @@ class DataService {
     private var _REF_BASE = DB_BASE
     private var _REF_USERS = DB_BASE.child("users")
     private var _REF_GROUPS = DB_BASE.child("groups")
+    private var _REF_ORGANIZATIONS = DB_BASE.child("organizations")
     private var _REF_STREAM = DB_BASE.child("stream")
     
     var REF_BASE: DatabaseReference {
@@ -29,6 +30,10 @@ class DataService {
     
     var REF_GROUPS: DatabaseReference {
         return _REF_GROUPS
+    }
+    
+    var REF_ORGANIZATIONS: DatabaseReference {
+        return _REF_ORGANIZATIONS
     }
     
     var REF_STREAM: DatabaseReference {
