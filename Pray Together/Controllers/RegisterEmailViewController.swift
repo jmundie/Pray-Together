@@ -13,19 +13,17 @@ class RegisterEmailViewController: UIViewController {
 
 //    OUTLETS
     @IBOutlet weak var registrationEmailTextField: UITextField!
-    
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var registrationPasswordTextField: UITextField!
-    
     @IBOutlet weak var registerButtonLabel: UILabel!
-    
     @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        registrationEmailTextField.delegate = self as! UITextFieldDelegate
+        
+        
     }
 
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -34,6 +32,7 @@ class RegisterEmailViewController: UIViewController {
     
     @IBAction func registerButtonPressed(_ sender: Any) {
         
+    
         
         Firebase.Auth.auth().createUser(withEmail: registrationEmailTextField.text!, password: registrationPasswordTextField.text!) { (user, error) in
             
