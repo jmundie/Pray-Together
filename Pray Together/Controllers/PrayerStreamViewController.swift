@@ -56,11 +56,11 @@ class PrayerStreamViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func retrievePrayers () {
-        let prayersDB = Database.database().reference().child("Prayers")
+        let prayersDB = DataService.instance.REF_STREAM
         prayersDB.observe(.childAdded) { (snapshot) in
             
             let snapshotValue = snapshot.value as! Dictionary<String, String>
-            let text = snapshotValue["PrayerBody"]!
+            let text = snapshotValue["Prayer Body"]!
             let sender = snapshotValue["sender"]
             
             let prayer = Prayers(prayerContent: text, senderId: sender!)

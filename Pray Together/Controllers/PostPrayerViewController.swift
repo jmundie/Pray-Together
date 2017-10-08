@@ -24,31 +24,22 @@ class PostPrayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prayerTextField.delegate = self
+        prayerTextField.delegate = self as! UITextViewDelegate
         postButton.bindToKeyboard()
         postPrayerLabel.bindToKeyboard()
     }
 
     @IBAction func postPrayerButtonPressed(_ sender: Any) {
-        prayerTextField.endEditing(true)
-        postButton.isEnabled = false
-        
-        let prayersDB = Database.database().reference().child("Prayers")
-        
-        let messageDictionary = ["sender": Auth.auth().currentUser?.email, "PrayerBody": prayerTextField.text!]
-        
-        prayersDB.childByAutoId().setValue(messageDictionary) {
-            (error, ref) in
-            
-            if error != nil {
-                print(error as Any)
-            } else {
-                print("prayer saved successfully")
-                
-                self.performSegue(withIdentifier: "goHome", sender: self)
-                
-            }
-            
+        if prayerTextField.text != nil && prayerTextField.text != "Post prayer here..." {
+            postButton.isEnabled = false
+            DataService.instance.uploadPost(withMessage: prayerTextField.text, forUID: (Auth.auth().currentUser?.email)!, withGroupKey: nil, sendComplete: { (isComplete) in
+                if isComplete {
+                    self.postButton.isEnabled = true
+                    self.performSegue(withIdentifier: "goHome", sender: self)
+                } else {
+                    print("error posting")
+                }
+            })
         }
     }
     

@@ -57,10 +57,10 @@ class DataService {
     
     func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
         if groupKey != nil {
-            REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            REF_GROUPS.child(groupKey!).child("prayers").childByAutoId().updateChildValues(["Prayer Body": message, "sender": uid])
             sendComplete(true)
         } else {
-            REF_STREAM.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            REF_STREAM.childByAutoId().updateChildValues(["Prayer Body": message, "sender": uid])
             sendComplete(true)
         }
     }
@@ -71,8 +71,8 @@ class DataService {
             guard let streamPrayersSnapshot = streamPrayersSnapshot.children.allObjects as? [DataSnapshot] else { return }
             
             for prayer in streamPrayersSnapshot {
-                let content = prayer.childSnapshot(forPath: "content").value as! String
-                let senderId = prayer.childSnapshot(forPath: "senderId").value as! String
+                let content = prayer.childSnapshot(forPath: "Prayer Body").value as! String
+                let senderId = prayer.childSnapshot(forPath: "sender").value as! String
                 let prayer = Prayers(prayerContent: content, senderId: senderId)
                 prayerArray.append(prayer)
             }
@@ -86,8 +86,8 @@ class DataService {
         REF_GROUPS.child(desiredGroup.key).child("prayers").observeSingleEvent(of: .value) { (groupPrayerSnapshot) in
             guard let groupPrayerSnapshot = groupPrayerSnapshot.children.allObjects as? [DataSnapshot] else { return }
             for groupPrayer in groupPrayerSnapshot {
-                let content = groupPrayer.childSnapshot(forPath: "content").value as! String
-                let senderId = groupPrayer.childSnapshot(forPath: "senderId").value as! String
+                let content = groupPrayer.childSnapshot(forPath: "Prayer Body").value as! String
+                let senderId = groupPrayer.childSnapshot(forPath: "sender").value as! String
                 let groupPrayer = Prayers(prayerContent: content, senderId: senderId)
                 groupPrayerArray.append(groupPrayer)
             }
