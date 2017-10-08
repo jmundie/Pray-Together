@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		443CE4FFEC12C00B44CED9C8 /* Pods_Pray_Together.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC655F3E11C15C09BF0C4B62 /* Pods_Pray_Together.framework */; };
 		F112C42F1F8AB14800EBA5F4 /* bindToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112C42E1F8AB14800EBA5F4 /* bindToKeyboard.swift */; };
+		F112C4311F8AB87E00EBA5F4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112C4301F8AB87E00EBA5F4 /* EditProfileViewController.swift */; };
 		F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5831F7FE9370001EAE2 /* AppDelegate.swift */; };
 		F135B5861F7FE9370001EAE2 /* PrayerStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5851F7FE9370001EAE2 /* PrayerStreamViewController.swift */; };
 		F135B5881F7FE9370001EAE2 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5871F7FE9370001EAE2 /* GroupsViewController.swift */; };
@@ -38,6 +39,7 @@
 		BC655F3E11C15C09BF0C4B62 /* Pods_Pray_Together.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pray_Together.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C21888EED525A434122EB256 /* Pods-Pray Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pray Together.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pray Together/Pods-Pray Together.release.xcconfig"; sourceTree = "<group>"; };
 		F112C42E1F8AB14800EBA5F4 /* bindToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bindToKeyboard.swift; sourceTree = "<group>"; };
+		F112C4301F8AB87E00EBA5F4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		F135B5801F7FE9370001EAE2 /* Pray Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pray Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F135B5831F7FE9370001EAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F135B5851F7FE9370001EAE2 /* PrayerStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				F135B5A21F7FFA170001EAE2 /* RegisterEmailViewController.swift */,
 				F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */,
 				F1E2225A1F859180004B93D9 /* ProfileViewController.swift */,
+				F112C4301F8AB87E00EBA5F4 /* EditProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				F135B59B1F7FF0CD0001EAE2 /* WelcomeViewController.swift in Sources */,
 				F135B59D1F7FF9EF0001EAE2 /* LoginFirstViewController.swift in Sources */,
 				F135B59F1F7FF9FC0001EAE2 /* LoginEmailViewController.swift in Sources */,
+				F112C4311F8AB87E00EBA5F4 /* EditProfileViewController.swift in Sources */,
 				F14B354B1F899397007A6C3D /* DataService.swift in Sources */,
 				F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */,
 				F1E2225B1F859180004B93D9 /* ProfileViewController.swift in Sources */,
