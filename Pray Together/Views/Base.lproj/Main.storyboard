@@ -363,18 +363,15 @@
                                         </state>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXV-V0-9MM">
-                                        <rect key="frame" x="111" y="27" width="153" height="26"/>
+                                        <rect key="frame" x="111" y="25" width="153" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organizations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fs-AU-kcG">
-                                                <rect key="frame" x="0.0" y="0.0" width="153" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="153" height="30"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="5fs-AU-kcG" firstAttribute="top" secondItem="OXV-V0-9MM" secondAttribute="top" constant="25" id="QgQ-Xs-Bdt"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -382,7 +379,9 @@
                                     <constraint firstItem="4jU-hf-GN3" firstAttribute="top" secondItem="tPd-gZ-MLi" secondAttribute="top" constant="25" id="6Vl-rT-EOt"/>
                                     <constraint firstItem="5fs-AU-kcG" firstAttribute="centerX" secondItem="tPd-gZ-MLi" secondAttribute="centerX" id="BUu-ac-phd"/>
                                     <constraint firstAttribute="height" constant="70" id="Fob-eC-iaQ"/>
+                                    <constraint firstItem="OXV-V0-9MM" firstAttribute="centerX" secondItem="tPd-gZ-MLi" secondAttribute="centerX" id="dHZ-9X-AbZ"/>
                                     <constraint firstItem="4jU-hf-GN3" firstAttribute="centerY" secondItem="5fs-AU-kcG" secondAttribute="centerY" id="pPn-xV-sAL"/>
+                                    <constraint firstItem="OXV-V0-9MM" firstAttribute="top" secondItem="tPd-gZ-MLi" secondAttribute="top" constant="25" id="vTF-8t-fdA"/>
                                     <constraint firstAttribute="trailing" secondItem="4jU-hf-GN3" secondAttribute="trailing" constant="20" id="zs1-gg-du9"/>
                                 </constraints>
                             </view>
@@ -1410,7 +1409,7 @@
         <image name="me-tabIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f3e-Yz-eqp"/>
+        <segue reference="uSO-Pz-YlB"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
