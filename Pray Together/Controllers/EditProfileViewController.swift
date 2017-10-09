@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import Firebase
 
+
 class EditProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 
@@ -34,13 +35,13 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func savedButtonPressed(_ sender: Any) {
-    }
+   
    
     @IBAction func cameraButtonPressed(_ sender: Any) {
         
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
+        imagePickerController.allowsEditing = true
         
         let actionSheet = UIAlertController(title: "Photo Source", message: "choose a source", preferredStyle: .actionSheet)
         
@@ -67,15 +68,44 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        profileImage.image = image
+        
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            profileImage.image = editedImage
+        } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            profileImage.image = originalImage
+        }
+        
+        profileImage.layer.cornerRadius = profileImage.frame.width/2
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.borderColor = #colorLiteral(red: 0.5352031589, green: 0.6165366173, blue: 0.6980209947, alpha: 1)
+        profileImage.layer.borderWidth = 3
+        
         picker.dismiss(animated: true, completion: nil)
+        
+        
+        guard let image = self.profileImage.image else { return }
+        guard let uploadData = UIImageJPEGRepresentation(image, 0.3) else { return }
+        let filename = NSUUID().uuidString
+        
+        Storage.storage().reference().child("Profile Images").child(filename).putData(uploadData, metadata: nil) { (metadata, error) in
+            if let error = error {
+                print("Failed to upload profile picture", error)
+                return
+            }
+            
+            guard let profileImageUrl = metadata?.downloadURL()?.absoluteString else { return }
+            print("successfully uploaded profile picture", profileImageUrl)
+        }
     }
+
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func savedButtonPressed(_ sender: Any) {
+       
+    }
     
 
     override func didReceiveMemoryWarning() {

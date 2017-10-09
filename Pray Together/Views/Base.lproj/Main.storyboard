@@ -834,7 +834,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EGs-QN-V2R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="1111.3943028485758"/>
+            <point key="canvasLocation" x="1543" y="1112"/>
         </scene>
         <!--Welcome View Controller-->
         <scene sceneID="Krv-D7-2u9">
@@ -1410,7 +1410,7 @@
         <image name="me-tabIcon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uSO-Pz-YlB"/>
+        <segue reference="f3e-Yz-eqp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>

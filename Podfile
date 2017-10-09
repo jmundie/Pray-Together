@@ -12,5 +12,6 @@ target 'Pray Together' do
   pod 'FBSDKCoreKit'
   pod 'FBSDKShareKit'
   pod 'FBSDKLoginKit'
+  pod 'Firebase/Storage'
 
 end
