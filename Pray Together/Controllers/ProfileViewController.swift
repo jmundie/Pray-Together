@@ -9,30 +9,17 @@
 import UIKit
 import Firebase
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    
     
     
     
 //    OUTLETS
     @IBOutlet weak var logoutButton: UIButton!
-    @IBOutlet weak var cameraButton: UIButton!
-    @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var editProfileButton: UIButton!
-    @IBOutlet weak var prayersLabel: UILabel!
-    @IBOutlet weak var numberOfPrayersLabel: UILabel!
-    @IBOutlet weak var organizationsLabel: UILabel!
-    @IBOutlet weak var numberOfOrganizationsLabel: UILabel!
-    @IBOutlet weak var groupsLabel: UILabel!
-    @IBOutlet weak var numberOfGroupsLabel: UILabel!
-    @IBOutlet weak var followersLabel: UILabel!
-    @IBOutlet weak var numberOfFollowersLabel: UILabel!
-    @IBOutlet weak var followingLabel: UILabel!
-    @IBOutlet weak var numberFollowingLabel: UILabel!
-    @IBOutlet weak var bioLabel: UILabel!
-    @IBOutlet weak var bioContentLabel: UILabel!
-    
     @IBOutlet weak var profileTableView: UITableView!
+    @IBOutlet weak var profileHeader: UICollectionView!
+    
     
     var prayerArray : [Prayers] = [Prayers]()
    
@@ -43,10 +30,23 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         profileTableView.dataSource = self
         profileTableView.register(UINib(nibName: "ProfileStreamTableViewCell", bundle: nil), forCellReuseIdentifier: "ProfileStreamCell")
         
+        profileHeader.delegate = self
+        profileHeader.dataSource = self
+        profileHeader.register(UINib(nibName: "ProfileHeaderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProfileHeaderCollectionViewCell")
+        
         retrievePrayers()
         
     }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let profileHeader = collectionView.dequeueReusableCell(withReuseIdentifier: "ProfileHeaderCollectionViewCell", for: indexPath) as! ProfileHeaderCollectionViewCell
+        
+        return profileHeader
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return prayerArray.count
@@ -81,8 +81,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.usernameLabel.text = Auth.auth().currentUser?.email
     }
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
@@ -94,14 +92,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("error signing out")
         }
     }
-    
-    @IBAction func editProfileButtonPressed(_ sender: Any) {
-    }
-    
-    @IBAction func cameraButtonPressed(_ sender: Any) {
-    }
-    
-    
+  
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

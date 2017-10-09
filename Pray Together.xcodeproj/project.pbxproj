@@ -10,8 +10,8 @@
 		443CE4FFEC12C00B44CED9C8 /* Pods_Pray_Together.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC655F3E11C15C09BF0C4B62 /* Pods_Pray_Together.framework */; };
 		F112C42F1F8AB14800EBA5F4 /* bindToKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112C42E1F8AB14800EBA5F4 /* bindToKeyboard.swift */; };
 		F112C4311F8AB87E00EBA5F4 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112C4301F8AB87E00EBA5F4 /* EditProfileViewController.swift */; };
-		F13232ED1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13232EB1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.swift */; };
-		F13232EE1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13232EC1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.xib */; };
+		F13232F31F8C337000EC11BF /* ProfileHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13232F11F8C337000EC11BF /* ProfileHeaderCollectionViewCell.swift */; };
+		F13232F41F8C337000EC11BF /* ProfileHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F13232F21F8C337000EC11BF /* ProfileHeaderCollectionViewCell.xib */; };
 		F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5831F7FE9370001EAE2 /* AppDelegate.swift */; };
 		F135B5861F7FE9370001EAE2 /* PrayerStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5851F7FE9370001EAE2 /* PrayerStreamViewController.swift */; };
 		F135B5881F7FE9370001EAE2 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F135B5871F7FE9370001EAE2 /* GroupsViewController.swift */; };
@@ -42,8 +42,8 @@
 		C21888EED525A434122EB256 /* Pods-Pray Together.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pray Together.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pray Together/Pods-Pray Together.release.xcconfig"; sourceTree = "<group>"; };
 		F112C42E1F8AB14800EBA5F4 /* bindToKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bindToKeyboard.swift; sourceTree = "<group>"; };
 		F112C4301F8AB87E00EBA5F4 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
-		F13232EB1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
-		F13232EC1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		F13232F11F8C337000EC11BF /* ProfileHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		F13232F21F8C337000EC11BF /* ProfileHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		F135B5801F7FE9370001EAE2 /* Pray Together.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pray Together.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F135B5831F7FE9370001EAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F135B5851F7FE9370001EAE2 /* PrayerStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamViewController.swift; sourceTree = "<group>"; };
@@ -185,8 +185,8 @@
 				F1BEFB921F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift */,
 				F1BEFB931F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib */,
 				F14B354C1F89A4BE007A6C3D /* Group.swift */,
-				F13232EB1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.swift */,
-				F13232EC1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.xib */,
+				F13232F11F8C337000EC11BF /* ProfileHeaderCollectionViewCell.swift */,
+				F13232F21F8C337000EC11BF /* ProfileHeaderCollectionViewCell.xib */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,8 +256,8 @@
 				F13F006E1F80260E00429673 /* GoogleService-Info.plist in Resources */,
 				F135B5901F7FE9370001EAE2 /* LaunchScreen.storyboard in Resources */,
 				F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */,
-				F13232EE1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.xib in Resources */,
 				F135B58D1F7FE9370001EAE2 /* Assets.xcassets in Resources */,
+				F13232F41F8C337000EC11BF /* ProfileHeaderCollectionViewCell.xib in Resources */,
 				F135B58B1F7FE9370001EAE2 /* Main.storyboard in Resources */,
 				F1BEFB951F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib in Resources */,
 			);
@@ -347,10 +347,10 @@
 				F135B59D1F7FF9EF0001EAE2 /* LoginFirstViewController.swift in Sources */,
 				F135B59F1F7FF9FC0001EAE2 /* LoginEmailViewController.swift in Sources */,
 				F112C4311F8AB87E00EBA5F4 /* EditProfileViewController.swift in Sources */,
+				F13232F31F8C337000EC11BF /* ProfileHeaderCollectionViewCell.swift in Sources */,
 				F14B354B1F899397007A6C3D /* DataService.swift in Sources */,
 				F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */,
 				F1E2225B1F859180004B93D9 /* ProfileViewController.swift in Sources */,
-				F13232ED1F8C293D00EC11BF /* ProfileHeaderCollectionReusableView.swift in Sources */,
 				F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */,
 				F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */,
 				F1BEFB941F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift in Sources */,
