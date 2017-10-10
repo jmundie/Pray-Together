@@ -32,10 +32,25 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
         profileImage.layer.borderColor = #colorLiteral(red: 0.5352031589, green: 0.6165366173, blue: 0.6980209947, alpha: 1)
         profileImage.layer.borderWidth = 3
         
-        usernameLabel.text = Auth.auth().currentUser?.email
+        getUsername()
         
     }
     
+    func getUsername() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            print(snapshot.value)
+            
+            guard let dictionary = snapshot.value as? [String : Any] else { return }
+            let username = dictionary["username"] as? String
+            self.usernameLabel.text = username
+            
+        }) { (error) in
+            print("failed",error)
+        }
+    
+    }
     
     @IBAction func editProfileButtonPressed(_ sender: Any) {
     }
