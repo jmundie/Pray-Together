@@ -35,32 +35,38 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
             guard let dictionary = snapshot.value as? [String : Any] else { return }
-            let username = dictionary["username"] as? String
             
+            let username = dictionary["username"] as? String
             self.usernameLabel.text = username
+            
+            guard let bio = dictionary["bio"] as? String else { return }
+            self.bioLabel.text = "Bio: \(bio)"
             
             guard let profilePhoto = dictionary["profileImage"] as? String else { return }
             guard let url = URL(string: profilePhoto) else { return }
             
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-                
-                print(data)
+            
+             
                 
                 guard let pictureData = data else { return }
-                let image = UIImage(data: pictureData)
+                guard let image = UIImage(data: pictureData) else { return }
                 
                 DispatchQueue.main.async {
+                    
                     self.profileImage.image = image
-                   self.profileImage.layer.cornerRadius = 100/2
+                    self.profileImage.layer.cornerRadius = 100/2
                     self.profileImage.layer.masksToBounds = true
                     self.profileImage.layer.borderColor = #colorLiteral(red: 0.5352031589, green: 0.6165366173, blue: 0.6980209947, alpha: 1)
                     self.profileImage.layer.borderWidth = 3
                 }
                 
                 
+                
+               
+                
             }).resume()
-            
-    
+        
         }) { (error) in
             print("failed",error)
         }

@@ -36,6 +36,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         retrievePrayers()
         
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1

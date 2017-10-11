@@ -110,9 +110,19 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     @IBAction func savedButtonPressed(_ sender: Any) {
-       
-    }
-    
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        if bioTextField.text != nil || usernameTextField.text != nil {
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(["bio" : bioTextField.text]) as? String
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(["username" : usernameTextField.text]) as? String
+            
+        } else {
+            print("failed to update profile")
+        }
+        
+        dismiss(animated: true, completion: nil)
+}
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
