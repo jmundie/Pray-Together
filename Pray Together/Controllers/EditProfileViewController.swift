@@ -95,6 +95,12 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             
             guard let profileImageUrl = metadata?.downloadURL()?.absoluteString else { return }
             print("successfully uploaded profile picture", profileImageUrl)
+            
+           guard let uid = Auth.auth().currentUser?.uid else { return }
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(["profileImage" : profileImageUrl])
+            
+            self.dismiss(animated: true, completion: nil)
         }
     }
 

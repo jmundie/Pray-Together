@@ -442,16 +442,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5no-34-Wrx">
-                                        <rect key="frame" x="138" y="25" width="100" height="26"/>
+                                        <rect key="frame" x="138" y="25" width="100" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHo-el-BB4">
-                                                <rect key="frame" x="0.0" y="0.0" width="30.5" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4o-Tz-Ziv">
-                                                <rect key="frame" x="30.5" y="0.0" width="69.5" height="26"/>
+                                                <rect key="frame" x="30.5" y="0.0" width="69.5" height="25"/>
                                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -470,9 +470,20 @@
                                             <action selector="logoutButtonPressed:" destination="ZVm-gy-xUa" eventType="touchUpInside" id="tEm-eH-9hM"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alt-hY-9Rd">
+                                        <rect key="frame" x="20" y="25" width="49" height="25"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
+                                        <state key="normal" title="Edit Profile"/>
+                                        <connections>
+                                            <segue destination="qLr-Ot-Uiu" kind="show" id="Jtk-hd-k8m"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.091001167889999998" green="0.23417572680000001" blue="0.2863805592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="alt-hY-9Rd" firstAttribute="centerY" secondItem="H4o-Tz-Ziv" secondAttribute="centerY" id="26i-Eu-A5j"/>
+                                    <constraint firstItem="alt-hY-9Rd" firstAttribute="top" secondItem="s0N-rP-guE" secondAttribute="top" constant="25" id="Bgb-eb-QlW"/>
+                                    <constraint firstItem="alt-hY-9Rd" firstAttribute="leading" secondItem="s0N-rP-guE" secondAttribute="leading" constant="20" id="Snj-as-3gB"/>
                                     <constraint firstItem="5no-34-Wrx" firstAttribute="centerX" secondItem="s0N-rP-guE" secondAttribute="centerX" id="Vse-gR-tdm"/>
                                     <constraint firstItem="poB-Xd-JSI" firstAttribute="top" secondItem="s0N-rP-guE" secondAttribute="top" constant="25" id="fP7-XC-BGX"/>
                                     <constraint firstItem="poB-Xd-JSI" firstAttribute="centerY" secondItem="H4o-Tz-Ziv" secondAttribute="centerY" id="hoa-KX-oOL"/>

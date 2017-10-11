@@ -25,32 +25,49 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
-        
-        profileImage.layer.cornerRadius = frame.width/2
-        profileImage.layer.masksToBounds = true
-        profileImage.layer.borderColor = #colorLiteral(red: 0.5352031589, green: 0.6165366173, blue: 0.6980209947, alpha: 1)
-        profileImage.layer.borderWidth = 3
-        
-        getUsername()
+        getProfileInfo()
         
     }
     
-    func getUsername() {
+    func getProfileInfo() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot.value)
             
             guard let dictionary = snapshot.value as? [String : Any] else { return }
             let username = dictionary["username"] as? String
+            
             self.usernameLabel.text = username
             
+            guard let profilePhoto = dictionary["profileImage"] as? String else { return }
+            guard let url = URL(string: profilePhoto) else { return }
+            
+            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+                
+                print(data)
+                
+                guard let pictureData = data else { return }
+                let image = UIImage(data: pictureData)
+                
+                DispatchQueue.main.async {
+                    self.profileImage.image = image
+                   self.profileImage.layer.cornerRadius = 100/2
+                    self.profileImage.layer.masksToBounds = true
+                    self.profileImage.layer.borderColor = #colorLiteral(red: 0.5352031589, green: 0.6165366173, blue: 0.6980209947, alpha: 1)
+                    self.profileImage.layer.borderWidth = 3
+                }
+                
+                
+            }).resume()
+            
+    
         }) { (error) in
             print("failed",error)
         }
     
     }
+    
+  
     
     @IBAction func editProfileButtonPressed(_ sender: Any) {
     }
