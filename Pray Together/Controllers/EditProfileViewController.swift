@@ -85,9 +85,11 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
         
         guard let image = self.profileImage.image else { return }
         guard let uploadData = UIImageJPEGRepresentation(image, 0.3) else { return }
-        let filename = NSUUID().uuidString
+//        let filename = NSUUID().uuidString
         
-        Storage.storage().reference().child("Profile Images").child(filename).putData(uploadData, metadata: nil) { (metadata, error) in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        Storage.storage().reference().child("Profile Images").child("users").child(uid).putData(uploadData, metadata: nil) { (metadata, error) in
             if let error = error {
                 print("Failed to upload profile picture", error)
                 return
@@ -111,16 +113,18 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func savedButtonPressed(_ sender: Any) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        if bioTextField.text != nil || usernameTextField.text != nil {
+        if bioTextField.text != nil  {
             
             Database.database().reference().child("users").child(uid).updateChildValues(["bio" : bioTextField.text]) as? String
+            
+            if usernameTextField.text != nil {
             
             Database.database().reference().child("users").child(uid).updateChildValues(["username" : usernameTextField.text]) as? String
             
         } else {
             print("failed to update profile")
         }
-        
+        }
         dismiss(animated: true, completion: nil)
 }
 

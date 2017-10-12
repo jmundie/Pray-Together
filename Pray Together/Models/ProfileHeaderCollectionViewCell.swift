@@ -20,6 +20,9 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
     @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var followersLabel: UILabel!
     
+
+    
+    
     
     
     override func awakeFromNib() {
@@ -27,28 +30,32 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
         
         getProfileInfo()
         
+        
+        
     }
     
     func getProfileInfo() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
+//        let reference = Database.database().reference().child("users").child(uid)
         
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
             guard let dictionary = snapshot.value as? [String : Any] else { return }
             
-            let username = dictionary["username"] as? String
-            self.usernameLabel.text = username
+            guard let username = dictionary["username"] as? String else { return }
+            self.usernameLabel.text = username.uppercased()
+            
+//            reference.updateChildValues(["username" : username])
             
             guard let bio = dictionary["bio"] as? String else { return }
-            self.bioLabel.text = "Bio: \(bio)"
+            self.bioLabel.text = bio
+
             
             guard let profilePhoto = dictionary["profileImage"] as? String else { return }
             guard let url = URL(string: profilePhoto) else { return }
             
             URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             
-             
-                
                 guard let pictureData = data else { return }
                 guard let image = UIImage(data: pictureData) else { return }
                 
@@ -60,16 +67,16 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
                     self.profileImage.layer.borderColor = #colorLiteral(red: 0.5352031589, green: 0.6165366173, blue: 0.6980209947, alpha: 1)
                     self.profileImage.layer.borderWidth = 3
                 }
+//                reference.updateChildValues(["profileImage" : image])
                 
-                
-                
-               
                 
             }).resume()
         
         }) { (error) in
             print("failed",error)
         }
+        
+        
     
     }
     

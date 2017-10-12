@@ -13,8 +13,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     
-    
-    
 //    OUTLETS
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var profileTableView: UITableView!
@@ -35,6 +33,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         profileHeader.register(UINib(nibName: "ProfileHeaderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ProfileHeaderCollectionViewCell")
         
         retrievePrayers()
+        
         
         
     }
