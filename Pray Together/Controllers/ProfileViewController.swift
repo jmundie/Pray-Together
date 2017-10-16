@@ -65,7 +65,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func retrievePrayers () {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let prayersDB = DataService.instance.REF_STREAM
-        prayersDB.child(uid).observe(.childAdded) { (snapshot) in
+        prayersDB.child(uid).queryOrdered(byChild: "creationDate").observe(.childAdded) { (snapshot) in
             
             let snapshotValue = snapshot.value as! Dictionary<String, Any>
             guard let text = snapshotValue["prayer"] else { return }
@@ -74,9 +74,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
             let prayer = Prayers(prayerContent: text as! String, senderId: sender as! String)
             
             self.prayerArray.append(prayer)
+            print(self.prayerArray.count)
             self.profileTableView.reloadData()
             
-            self.profileTableView.reloadData()
+            
         }
     
     }

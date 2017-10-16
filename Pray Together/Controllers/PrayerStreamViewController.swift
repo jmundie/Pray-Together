@@ -27,7 +27,7 @@ class PrayerStreamViewController: UIViewController, UITableViewDelegate, UITable
         prayerStreamTableView.register(UINib(nibName: "PrayerStreamTableViewCell", bundle: nil), forCellReuseIdentifier: "PrayerStreamCell")
         
         configureTableView ()
-        retrievePrayers ()
+        fetchPrayers ()
         
         prayerStreamTableView.separatorStyle = .singleLine
         
@@ -41,36 +41,36 @@ class PrayerStreamViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return prayerArray.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PrayerStreamCell", for: indexPath) as! PrayerStreamTableViewCell
         
         cell.content.text = prayerArray[indexPath.row].prayerContent
-        cell.username.text = prayerArray[indexPath.row].senderId
+        cell.username.text = prayerArray[indexPath.row].senderId.uppercased()
         cell.profileImage.image = UIImage(named: "defaultProfileImage")
-        
-        
         
         return cell
     }
     
-    func retrievePrayers () {
+    func fetchPrayers () {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
         let prayersDB = DataService.instance.REF_STREAM
-        prayersDB.observe(.childAdded) { (snapshot) in
+        prayersDB.child(uid).queryOrdered(byChild: "creationDate").observe(.childAdded) { (snapshot) in
             
             let snapshotValue = snapshot.value as! Dictionary<String, Any>
-            guard let text = snapshotValue["Prayer Body"] else { return }
-            guard let sender = snapshotValue["sender"] else { return }
+            guard let text = snapshotValue["prayer"] else { return }
+            guard let sender = snapshotValue["username"] else { return }
             
             let prayer = Prayers(prayerContent: text as! String, senderId: sender as! String)
             
             self.prayerArray.append(prayer)
             self.prayerStreamTableView.reloadData()
             
-            self.configureTableView()
-            self.prayerStreamTableView.reloadData()
+            
         }
+        
     }
 
     override func didReceiveMemoryWarning() {

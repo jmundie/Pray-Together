@@ -45,13 +45,16 @@ class DataService {
     }
     
     
+    
 
-    func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()) {
+    func uploadPost(withMessage message: String, forUID uid: String, withUsername username: String, withGroupKey groupKey: String?, withCreationDate creationDate: Double, sendComplete: @escaping (_ status: Bool) -> ()) {
+        guard let userUid = Auth.auth().currentUser?.uid else { return }
+        
         if groupKey != nil {
-            REF_GROUPS.child(groupKey!).child("Prayer Body").childByAutoId().updateChildValues(["Prayer Body": message, "sender": uid])
+            REF_GROUPS.child(groupKey!).child("Prayer Body").childByAutoId().updateChildValues(["prayer": message, "sender": uid, "username": username])
             sendComplete(true)
         } else {
-            REF_STREAM.childByAutoId().updateChildValues(["Prayer Body": message, "sender": uid])
+            REF_STREAM.child(userUid).childByAutoId().updateChildValues(["prayer": message, "sender": uid, "username": username, "creationDate": Date().timeIntervalSince1970])
             sendComplete(true)
         }
     }

@@ -30,9 +30,20 @@ class PostPrayerViewController: UIViewController {
     }
 
     @IBAction func postPrayerButtonPressed(_ sender: Any) {
-        if prayerTextField.text != nil && prayerTextField.text != "Post prayer here..." {
-            postButton.isEnabled = false
-            DataService.instance.uploadPost(withMessage: prayerTextField.text, forUID: (Auth.auth().currentUser?.email)!, withGroupKey: nil, sendComplete: { (isComplete) in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let ref = Database.database().reference().child(uid)
+        
+        Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard let dictionary = snapshot.value as? [String : Any] else { return }
+            
+            guard let username = dictionary["username"] as? String else { return }
+            
+        
+        
+            if self.prayerTextField.text != nil && self.prayerTextField.text != "Post prayer here..." {
+            self.postButton.isEnabled = false
+                DataService.instance.uploadPost(withMessage: self.prayerTextField.text, forUID: uid, withUsername:username , withGroupKey: nil, withCreationDate: Date().timeIntervalSince1970, sendComplete: { (isComplete) in
                 if isComplete {
                     self.postButton.isEnabled = true
                     self.performSegue(withIdentifier: "goHome", sender: self)
@@ -42,7 +53,7 @@ class PostPrayerViewController: UIViewController {
             })
         }
     }
-    
+    )}
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

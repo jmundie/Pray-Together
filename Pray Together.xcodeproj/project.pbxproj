@@ -30,6 +30,9 @@
 		F1BEFB8F1F86FBDD008ABF04 /* Prayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BEFB8E1F86FBDD008ABF04 /* Prayers.swift */; };
 		F1BEFB941F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BEFB921F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift */; };
 		F1BEFB951F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1BEFB931F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib */; };
+		F1D3F7A91F95554B009F1EC2 /* SearchUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D3F7A81F95554B009F1EC2 /* SearchUsersViewController.swift */; };
+		F1D3F7AC1F955927009F1EC2 /* SearchUsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D3F7AA1F955927009F1EC2 /* SearchUsersTableViewCell.swift */; };
+		F1D3F7AD1F955927009F1EC2 /* SearchUsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1D3F7AB1F955927009F1EC2 /* SearchUsersTableViewCell.xib */; };
 		F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */; };
 		F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */; };
 		F1E222591F8588AB004B93D9 /* PostPrayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */; };
@@ -64,6 +67,9 @@
 		F1BEFB8E1F86FBDD008ABF04 /* Prayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayers.swift; sourceTree = "<group>"; };
 		F1BEFB921F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStreamTableViewCell.swift; sourceTree = "<group>"; };
 		F1BEFB931F87DC3E008ABF04 /* ProfileStreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileStreamTableViewCell.xib; sourceTree = "<group>"; };
+		F1D3F7A81F95554B009F1EC2 /* SearchUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersViewController.swift; sourceTree = "<group>"; };
+		F1D3F7AA1F955927009F1EC2 /* SearchUsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUsersTableViewCell.swift; sourceTree = "<group>"; };
+		F1D3F7AB1F955927009F1EC2 /* SearchUsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchUsersTableViewCell.xib; sourceTree = "<group>"; };
 		F1E222541F8580B2004B93D9 /* PrayerStreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerStreamTableViewCell.swift; sourceTree = "<group>"; };
 		F1E222551F8580B2004B93D9 /* PrayerStreamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrayerStreamTableViewCell.xib; sourceTree = "<group>"; };
 		F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostPrayerViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 				F1E222581F8588AB004B93D9 /* PostPrayerViewController.swift */,
 				F1E2225A1F859180004B93D9 /* ProfileViewController.swift */,
 				F112C4301F8AB87E00EBA5F4 /* EditProfileViewController.swift */,
+				F1D3F7A81F95554B009F1EC2 /* SearchUsersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +194,8 @@
 				F14B354C1F89A4BE007A6C3D /* Group.swift */,
 				F13232F11F8C337000EC11BF /* ProfileHeaderCollectionViewCell.swift */,
 				F13232F21F8C337000EC11BF /* ProfileHeaderCollectionViewCell.xib */,
+				F1D3F7AA1F955927009F1EC2 /* SearchUsersTableViewCell.swift */,
+				F1D3F7AB1F955927009F1EC2 /* SearchUsersTableViewCell.xib */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D3F7AD1F955927009F1EC2 /* SearchUsersTableViewCell.xib in Resources */,
 				F13F006E1F80260E00429673 /* GoogleService-Info.plist in Resources */,
 				F135B5901F7FE9370001EAE2 /* LaunchScreen.storyboard in Resources */,
 				F1E222571F8580B2004B93D9 /* PrayerStreamTableViewCell.xib in Resources */,
@@ -338,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D3F7AC1F955927009F1EC2 /* SearchUsersTableViewCell.swift in Sources */,
 				F14B35491F899125007A6C3D /* AuthServices.swift in Sources */,
 				F14B354D1F89A4BE007A6C3D /* Group.swift in Sources */,
 				F112C42F1F8AB14800EBA5F4 /* bindToKeyboard.swift in Sources */,
@@ -351,6 +362,7 @@
 				F14B354B1F899397007A6C3D /* DataService.swift in Sources */,
 				F1E222561F8580B2004B93D9 /* PrayerStreamTableViewCell.swift in Sources */,
 				F1E2225B1F859180004B93D9 /* ProfileViewController.swift in Sources */,
+				F1D3F7A91F95554B009F1EC2 /* SearchUsersViewController.swift in Sources */,
 				F135B5841F7FE9370001EAE2 /* AppDelegate.swift in Sources */,
 				F135B5A11F7FFA0B0001EAE2 /* RegisterFirstViewController.swift in Sources */,
 				F1BEFB941F87DC3E008ABF04 /* ProfileStreamTableViewCell.swift in Sources */,
