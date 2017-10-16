@@ -18,7 +18,7 @@ class DataService {
     private var _REF_USERS = DB_BASE.child("users")
     private var _REF_GROUPS = DB_BASE.child("groups")
     private var _REF_ORGANIZATIONS = DB_BASE.child("organizations")
-    private var _REF_STREAM = DB_BASE.child("stream")
+    private var _REF_STREAM = DB_BASE.child("Prayer Posts")
     
     var REF_BASE: DatabaseReference {
         return _REF_BASE

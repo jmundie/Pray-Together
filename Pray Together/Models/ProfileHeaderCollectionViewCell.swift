@@ -19,6 +19,7 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
     @IBOutlet weak var groupsLabel: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var followersLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
 
     
@@ -36,7 +37,7 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
     
     func getProfileInfo() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-//        let reference = Database.database().reference().child("users").child(uid)
+
         
         Database.database().reference().child("users").child(uid).observeSingleEvent(of: .value, with: { (snapshot) in
             
@@ -45,7 +46,10 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
             guard let username = dictionary["username"] as? String else { return }
             self.usernameLabel.text = username.uppercased()
             
-//            reference.updateChildValues(["username" : username])
+            guard let name = dictionary["fullName"] as? String else { return }
+            self.nameLabel.text = name.uppercased()
+            
+
             
             guard let bio = dictionary["bio"] as? String else { return }
             self.bioLabel.text = bio
@@ -67,7 +71,7 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
                     self.profileImage.layer.borderColor = #colorLiteral(red: 0.5352031589, green: 0.6165366173, blue: 0.6980209947, alpha: 1)
                     self.profileImage.layer.borderWidth = 3
                 }
-//                reference.updateChildValues(["profileImage" : image])
+
                 
                 
             }).resume()
@@ -79,12 +83,6 @@ class ProfileHeaderCollectionViewCell: UICollectionViewCell, UICollectionViewDel
         
     
     }
-    
-  
-    
-    @IBAction func editProfileButtonPressed(_ sender: Any) {
-    }
-    
     
 
 }

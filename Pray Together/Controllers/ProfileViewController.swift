@@ -63,14 +63,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func retrievePrayers () {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
         let prayersDB = DataService.instance.REF_STREAM
-        prayersDB.observe(.childAdded) { (snapshot) in
+        prayersDB.child(uid).observe(.childAdded) { (snapshot) in
             
-            let snapshotValue = snapshot.value as! Dictionary<String, String>
-            let text = snapshotValue["Prayer Body"]!
-            let sender = snapshotValue["sender"]
+            let snapshotValue = snapshot.value as! Dictionary<String, Any>
+            guard let text = snapshotValue["prayer"] else { return }
+            guard let sender = snapshotValue["username"] else { return }
             
-            let prayer = Prayers(prayerContent: text, senderId: sender!)
+            let prayer = Prayers(prayerContent: text as! String, senderId: sender as! String)
             
             self.prayerArray.append(prayer)
             self.profileTableView.reloadData()
