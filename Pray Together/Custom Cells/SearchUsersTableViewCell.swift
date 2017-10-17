@@ -15,19 +15,25 @@ class SearchUsersTableViewCell: UITableViewCell {
             
             guard let profileImageUrl = user?.profileImageUrl else { return }
             
-            profileImage.loadImage(urlString: profileImageUrl)
+            profileImage?.loadImage(urlString: profileImageUrl)
             
         }
     }
     
-    @IBOutlet weak var profileImage: CustomImageView!
+    @IBOutlet weak var profileImage: CustomImageView? = {
+        let iv = CustomImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        return iv
+    }()
+    
     @IBOutlet weak var usernameLabel: UILabel!
     
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

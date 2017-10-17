@@ -18,13 +18,11 @@ class SearchUsersViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var searchResultsTableView: UITableView!
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText.isEmpty {
-            filteredUsers = users
-        } else {
+        
             filteredUsers = self.users.filter { (user) -> Bool in
                 return user.username.lowercased().contains(searchText.lowercased())
             }
-        }
+        
         self.searchResultsTableView?.reloadData()
     }
     
@@ -37,7 +35,9 @@ class SearchUsersViewController: UIViewController, UITableViewDelegate, UITableV
        
         userSearchBar.delegate = self
         
+        configureTableView()
         fetchUsers()
+        
    
     }
     
@@ -62,16 +62,19 @@ class SearchUsersViewController: UIViewController, UITableViewDelegate, UITableV
                 return u1.username.compare(u2.username) == .orderedAscending
             
             })
-//            uncomment below if you want all the users to appear at start
-//            self.filteredUsers = self.users
+
             self.searchResultsTableView.reloadData()
             
-            print("Fetching users..")
+           
         }) { (error) in
             print("Failed to fetch users for search:", error)
         }
     }
     
+    func configureTableView () {
+        searchResultsTableView.rowHeight = UITableViewAutomaticDimension
+        searchResultsTableView.estimatedRowHeight = 75.0
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredUsers.count
@@ -82,6 +85,7 @@ class SearchUsersViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchUsersTableViewCell", for: indexPath) as! SearchUsersTableViewCell
         
         cell.user = filteredUsers[indexPath.item]
+        
     
         return cell
     }
