@@ -15,6 +15,7 @@ class RegisterEmailViewController: UIViewController {
     @IBOutlet weak var registrationEmailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var registrationPasswordTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var registerButtonLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     
@@ -28,8 +29,8 @@ class RegisterEmailViewController: UIViewController {
     }
     
     @IBAction func registerButtonPressed(_ sender: Any) {
-        if registrationEmailTextField.text != nil && registrationPasswordTextField.text != nil && usernameTextField.text != nil {
-            AuthService.instance.registerUser(withEmail: self.registrationEmailTextField.text!, andPassword: self.registrationPasswordTextField.text!, andUsername: self.usernameTextField.text!, andProfileImage: "", andBio: "", userCreationComplete: { (success, registrationError) in
+        if registrationEmailTextField.text != nil && registrationPasswordTextField.text != nil && usernameTextField.text != nil && nameTextField.text != nil {
+            AuthService.instance.registerUser(withEmail: self.registrationEmailTextField.text!, andPassword: self.registrationPasswordTextField.text!, andUsername: self.usernameTextField.text!, andProfileImage: "", andBio: "", andFullName: nameTextField.text!, userCreationComplete: { (success, registrationError) in
                 if success {
                     AuthService.instance.loginUser(withEmail: self.registrationEmailTextField.text!, andPassword: self.registrationPasswordTextField.text!, loginComplete: { (success, nil) in
                         self.performSegue(withIdentifier: "gotoHome", sender: self)

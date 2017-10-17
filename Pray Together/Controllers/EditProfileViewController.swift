@@ -120,9 +120,13 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
             if usernameTextField.text != nil {
             
             Database.database().reference().child("users").child(uid).updateChildValues(["username" : usernameTextField.text]) as? String
+                
+                if nameTextField.text != nil {
+                    Database.database().reference().child("users").child(uid).updateChildValues(["fullName" : nameTextField.text]) as? String
             
         } else {
             print("failed to update profile")
+        }
         }
         }
         dismiss(animated: true, completion: nil)

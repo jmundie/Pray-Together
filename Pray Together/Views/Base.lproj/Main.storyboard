@@ -1213,7 +1213,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VGq-sH-0Eh">
-                                <rect key="frame" x="62" y="178.5" width="250" height="158"/>
+                                <rect key="frame" x="62" y="178.5" width="250" height="198"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29i-IY-6Dw">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
@@ -1221,20 +1221,26 @@
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWL-AR-ZlM">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xWL-AR-ZlM">
                                         <rect key="frame" x="0.0" y="40" width="250" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-kD-TcU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ac1-1x-Z8p">
                                         <rect key="frame" x="0.0" y="80" width="250" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hdV-kD-TcU">
+                                        <rect key="frame" x="0.0" y="120" width="250" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAn-f0-F8q">
-                                        <rect key="frame" x="0.0" y="120" width="250" height="38"/>
+                                        <rect key="frame" x="0.0" y="160" width="250" height="38"/>
                                         <state key="normal" image="Register Button"/>
                                         <connections>
                                             <action selector="registerButtonPressed:" destination="3QY-f8-nz7" eventType="touchUpInside" id="Fpy-69-Wdh"/>
@@ -1246,7 +1252,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5C-te-9J2">
-                                <rect key="frame" x="144" y="304.5" width="87.5" height="26"/>
+                                <rect key="frame" x="144" y="344.5" width="87.5" height="26"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1271,6 +1277,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="PfS-Ko-LiT" id="fAD-33-5hB"/>
+                        <outlet property="nameTextField" destination="xWL-AR-ZlM" id="zA0-oe-q1g"/>
                         <outlet property="registerButtonLabel" destination="c5C-te-9J2" id="LUJ-tj-iLO"/>
                         <outlet property="registrationEmailTextField" destination="29i-IY-6Dw" id="FKF-B8-a2l"/>
                         <outlet property="registrationPasswordTextField" destination="hdV-kD-TcU" id="whR-na-Pz6"/>
@@ -1429,7 +1436,7 @@
         <image name="search_selected" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uSO-Pz-YlB"/>
+        <segue reference="f3e-Yz-eqp"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.55087739229999999" green="0.61406648159999999" blue="0.69024974110000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
