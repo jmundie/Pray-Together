@@ -9,7 +9,22 @@
 import UIKit
 
 class SearchUsersTableViewCell: UITableViewCell {
-
+    var user: User? {
+        didSet {
+            usernameLabel.text = user?.username
+            
+            guard let profileImageUrl = user?.profileImageUrl else { return }
+            
+            profileImage.loadImage(urlString: profileImageUrl)
+            
+        }
+    }
+    
+    @IBOutlet weak var profileImage: CustomImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

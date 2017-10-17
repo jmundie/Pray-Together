@@ -17,14 +17,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchUsersTableViewCel" rowHeight="83" id="KGk-i7-Jjw" customClass="SearchUsersTableViewCell" customModule="Pray_Together" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchUsersTableViewCell" rowHeight="83" id="KGk-i7-Jjw" customClass="SearchUsersTableViewCell" customModule="Pray_Together" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="82.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUb-5Z-ao5">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QUb-5Z-ao5" customClass="CustomImageView" customModule="Pray_Together" customModuleProvider="target">
                         <rect key="frame" x="18" y="16" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="D4u-s6-oc3"/>
@@ -46,6 +46,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileImage" destination="QUb-5Z-ao5" id="JC2-6B-mRJ"/>
+                <outlet property="usernameLabel" destination="tUC-oA-rDi" id="TjK-Hb-v8n"/>
+            </connections>
             <point key="canvasLocation" x="34" y="73.5"/>
         </tableViewCell>
     </objects>

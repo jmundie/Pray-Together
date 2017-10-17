@@ -147,15 +147,6 @@
                                     <constraint firstAttribute="height" constant="70" id="tMZ-hm-0CH"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Users" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="24H-b5-cC7">
-                                <rect key="frame" x="10" y="80" width="355" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Y7b-P1-TvC"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Hk-Pc-qcm">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,30 +161,37 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="search users" translatesAutoresizingMaskIntoConstraints="NO" id="7dZ-yK-scC">
+                                <rect key="frame" x="0.0" y="70" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="r2Q-eB-PIo"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GOx-j1-8ta" firstAttribute="trailing" secondItem="0Hk-Pc-qcm" secondAttribute="trailing" id="9Ys-1Z-8ff"/>
-                            <constraint firstItem="GOx-j1-8ta" firstAttribute="trailing" secondItem="24H-b5-cC7" secondAttribute="trailing" constant="10" id="BoE-f3-w3S"/>
-                            <constraint firstItem="0Hk-Pc-qcm" firstAttribute="top" secondItem="24H-b5-cC7" secondAttribute="bottom" constant="10" id="IMw-Rv-Cfz"/>
-                            <constraint firstItem="24H-b5-cC7" firstAttribute="leading" secondItem="GOx-j1-8ta" secondAttribute="leading" constant="10" id="OCK-3B-hTF"/>
+                            <constraint firstItem="7dZ-yK-scC" firstAttribute="trailing" secondItem="GOx-j1-8ta" secondAttribute="trailing" id="Mfp-Ly-TWZ"/>
+                            <constraint firstItem="0Hk-Pc-qcm" firstAttribute="leading" secondItem="GOx-j1-8ta" secondAttribute="leading" id="Ood-0I-RgW"/>
+                            <constraint firstItem="0Hk-Pc-qcm" firstAttribute="trailing" secondItem="GOx-j1-8ta" secondAttribute="trailing" id="WUW-Q7-yRh"/>
+                            <constraint firstItem="0Hk-Pc-qcm" firstAttribute="top" secondItem="7dZ-yK-scC" secondAttribute="bottom" id="bhR-no-Pa5"/>
                             <constraint firstItem="qXu-no-efm" firstAttribute="top" secondItem="tBm-4Y-9a8" secondAttribute="top" id="dc4-Md-t2v"/>
                             <constraint firstItem="qXu-no-efm" firstAttribute="trailing" secondItem="GOx-j1-8ta" secondAttribute="trailing" id="gUN-L8-w2u"/>
+                            <constraint firstItem="7dZ-yK-scC" firstAttribute="top" secondItem="qXu-no-efm" secondAttribute="bottom" id="iZD-Oy-W5I"/>
                             <constraint firstItem="qXu-no-efm" firstAttribute="leading" secondItem="GOx-j1-8ta" secondAttribute="leading" id="qAk-ib-5DY"/>
-                            <constraint firstItem="24H-b5-cC7" firstAttribute="top" secondItem="qXu-no-efm" secondAttribute="bottom" constant="10" id="s2d-nZ-Vlk"/>
-                            <constraint firstItem="GOx-j1-8ta" firstAttribute="bottom" secondItem="0Hk-Pc-qcm" secondAttribute="bottom" id="xLf-iR-Rqu"/>
-                            <constraint firstItem="0Hk-Pc-qcm" firstAttribute="leading" secondItem="GOx-j1-8ta" secondAttribute="leading" id="zsR-Hk-jbd"/>
+                            <constraint firstItem="7dZ-yK-scC" firstAttribute="leading" secondItem="GOx-j1-8ta" secondAttribute="leading" id="wsn-Xl-2xM"/>
+                            <constraint firstItem="0Hk-Pc-qcm" firstAttribute="bottom" secondItem="GOx-j1-8ta" secondAttribute="bottom" id="xPy-sk-RQy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GOx-j1-8ta"/>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="24H-b5-cC7" id="Nej-eY-ESD"/>
                         <outlet property="searchResultsTableView" destination="0Hk-Pc-qcm" id="REF-lH-jUr"/>
+                        <outlet property="userSearchBar" destination="7dZ-yK-scC" id="VmB-HS-xqR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLy-NI-sMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-294"/>
+            <point key="canvasLocation" x="1445.5999999999999" y="-294.60269865067471"/>
         </scene>
         <!--New Prayer-->
         <scene sceneID="QWw-UA-XU9">
